@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vyhledávání - Centrum Zdraví</title>
+    <meta name="description" content="Vyhledejte lékaře, služby nebo oddělení v Centru Zdraví.">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body itemscope itemtype="http://schema.org/MedicalOrganization">
+    <header>
+        <div>
+            <img src="./Assets/health.png" alt="Logo" itemprop="logo">
+        </div>
+        <div>
+            <h1 itemprop="name">Centrum Zdraví</h1>
+            <p itemprop="description">Poskytujeme moderní zdravotní péči s důrazem na lidský přístup a inovace.</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <ul class="main-nav">
+                <li><a href="index.html">Domů</a></li>
+                <li><a href="services.html">Služby</a></li>
+                <li><a href="doctors.html">Lékaři</a></li>
+                <li><a href="departments.html">Oddělení</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+            <div class="search-container">
+                <form action="search.html" method="get" class="search-form">
+                    <input type="text" name="q" placeholder="Vyhledat lékaře, služby..." class="search-input" value="kardiologie">
+                    <button type="submit" class="search-button">🔍</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="breadcrumb">
+            <a href="index.html">Domů</a> > <span>Vyhledávání</span>
+        </div>
+        <section>
+            <h1>Výsledky vyhledávání</h1>
+            <p class="search-info">Zobrazujeme výsledky pro: <strong>"kardiologie"</strong> (3 výsledky nalezeny)</p>
+        </section>
+
+        <section class="search-results">
+            <div class="result-card">
+                <div class="result-type">🏥 Oddělení</div>
+                <h3><a href="department-detail.html?id=kardiologie">Kardiologie</a></h3>
+                <p class="result-description">Specializovaná péče o srdce a cévní systém, preventivní kardiologie a diagnostika.</p>
+                <div class="result-details">
+                    <p><strong>Vedoucí:</strong> MUDr. Pavel Dvořák</p>
+                    <p><strong>Ordinační hodiny:</strong> Út, Čt 9:00-15:00</p>
+                    <p><strong>Služby:</strong> EKG vyšetření, Echokardiografie, Holter monitoring</p>
+                </div>
+                <div class="result-actions">
+                    <a href="department-detail.html?id=kardiologie" class="btn-secondary">Více informací</a>
+                    <a href="booking.html?department=kardiologie" class="btn-primary">Rezervovat</a>
+                </div>
+            </div>
+
+            <div class="result-card">
+                <div class="result-type">👨‍⚕️ Lékař</div>
+                <h3><a href="doctor-detail.html?id=pavel-dvorak">MUDr. Pavel Dvořák</a></h3>
+                <p class="result-description">Kardiolog s rozsáhlými zkušenostmi v diagnostice a léčbě srdečních onemocnění. Specializuje se na preventivní kardiologii.</p>
+                <div class="result-details">
+                    <p><strong>Specializace:</strong> Kardiologie</p>
+                    <p><strong>Zkušenosti:</strong> 20 let praxe</p>
+                    <p><strong>Jazyky:</strong> Čeština, Angličtina</p>
+                </div>
+                <div class="result-actions">
+                    <a href="doctor-detail.html?id=pavel-dvorak" class="btn-secondary">Profil lékaře</a>
+                    <a href="booking.html?doctor=pavel-dvorak" class="btn-primary">Rezervovat</a>
+                </div>
+            </div>
+
+            <div class="result-card">
+                <div class="result-type">🩺 Služba</div>
+                <h3><a href="service-detail.html?id=kardiologie">Kardiologické vyšetření</a></h3>
+                <p class="result-description">Komplexní vyšetření srdce a cévního systému včetně EKG a echokardiografie.</p>
+                <div class="result-details">
+                    <p><strong>Délka:</strong> 45 minut</p>
+                    <p><strong>Cena:</strong> 1100.00 Kč</p>
+                    <p><strong>Lékař:</strong> MUDr. Pavel Dvořák</p>
+                </div>
+                <div class="result-actions">
+                    <a href="service-detail.html?id=kardiologie" class="btn-secondary">Více informací</a>
+                    <a href="booking.html?service=kardiologie" class="btn-primary">Rezervovat</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="search-suggestions">
+            <h2>Možná vás také zaujme</h2>
+            <div class="suggestions-grid">
+                <div class="suggestion-card">
+                    <h4>🔍 Další vyhledávání</h4>
+                    <ul class="suggestion-links">
+                        <li><a href="search.html?q=dermatologie">Dermatologie</a></li>
+                        <li><a href="search.html?q=pediatrie">Pediatrie</a></li>
+                        <li><a href="search.html?q=stomatologie">Stomatologie</a></li>
+                        <li><a href="search.html?q=fyzioterapie">Fyzioterapie</a></li>
+                    </ul>
+                </div>
+                <div class="suggestion-card">
+                    <h4>📋 Populární služby</h4>
+                    <ul class="suggestion-links">
+                        <li><a href="services.html#obecnaProhlidka">Obecná prohlídka</a></li>
+                        <li><a href="services.html#detskaPece">Dětská péče</a></li>
+                        <li><a href="services.html#zubniOrdinace">Zubní ordinace</a></li>
+                        <li><a href="services.html#dermatologie">Dermatologie</a></li>
+                    </ul>
+                </div>
+                <div class="suggestion-card">
+                    <h4>👨‍⚕️ Naši lékaři</h4>
+                    <ul class="suggestion-links">
+                        <li><a href="doctors.html">Všichni lékaři</a></li>
+                        <li><a href="doctors.html#jan-novak">MUDr. Jan Novák</a></li>
+                        <li><a href="doctors.html#eva-svobodova">MUDr. Eva Svobodová</a></li>
+                        <li><a href="doctors.html#petr-horak">MDDr. Petr Horák</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="search-help">
+            <h2>Potřebujete pomoc s vyhledáváním?</h2>
+            <div class="help-content">
+                <p>Pokud jste nenašli to, co hledáte, zkuste:</p>
+                <ul>
+                    <li>Použít jiná klíčová slova</li>
+                    <li>Zkontrolovat pravopis</li>
+                    <li>Použít obecnější termíny</li>
+                    <li>Kontaktovat naši recepci na <strong>+420 123 456 789</strong></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-columns">
+            <div class="footer-section" itemscope itemtype="http://schema.org/PostalAddress">
+                <h3>Kontakt</h3>
+                <address itemprop="address">
+                    <p itemprop="streetAddress">Nemocniční 1</p>
+                    <p><span itemprop="addressLocality">Praha 9</span>, <span itemprop="postalCode">19000</span></p>
+                    <p itemprop="addressCountry">Česká Republika</p>
+                    <p>Tel: <span itemprop="telephone">+420123456789</span></p>
+                    <p>Email: info@centrumzdravi.cz</p>
+                </address>
+            </div>
+
+            <div class="footer-section">
+                <h3>Služby</h3>
+                <ul id="footerServices" class="footer-services">
+                    <li><a href="services.html#obecnaProhlidka">Obecná prohlídka</a></li>
+                    <li><a href="services.html#detskaPece">Dětská péče</a></li>
+                    <li><a href="services.html#zubniOrdinace">Zubní ordinace</a></li>
+                    <li><a href="services.html#dermatologie">Dermatologie</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Sledujte nás</h3>
+                <ul id="footerSocial" class="social-links">
+                    <li>
+                        <a href="https://threads.com/centrumzdravi" target="_blank">
+                            <img src="assets/threads.png" alt="threads" width="20">
+                            Threads
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/centrumzdravi" target="_blank">
+                            <img src="assets/twitter.png" alt="twitter" width="20">
+                            Twitter
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com/centrumzdravi" target="_blank">
+                            <img src="assets/instagram.png" alt="instagram" width="20">
+                            Instagram
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://facebook.com/centrumzdravi" target="_blank">
+                            <img src="assets/facebook.png" alt="facebook" width="20">
+                            Facebook
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Otevírací doba</h3>
+                <div id="footerOpeningHours" itemprop="openingHoursSpecification">
+                    <p><strong>Pondělí-Pátek:</strong> 08:00 - 18:00</p>
+                    <p><strong>Sobota:</strong> 09:00 - 14:00</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="legal-info">
+            <div class="student-project-notice">
+                <p><strong>🎓 Studentský projekt</strong> - Tento web byl vytvořen jako součást školního projektu</p>
+            </div>
+            <p>&copy; 2025 Centrum Zdraví. Všechna práva vyhrazena.</p>
+            <div class="authors">
+                <p><strong>Autoři:</strong> Jan Novák, Eva Svobodová, Petr Horák</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

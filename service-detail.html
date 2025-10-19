@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail služby - Centrum Zdraví</title>
+    <meta name="description" content="Detailní informace o zdravotní službě v Centru Zdraví.">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body itemscope itemtype="http://schema.org/MedicalOrganization">
+    <header>
+        <div>
+            <img src="./Assets/health.png" alt="Logo" itemprop="logo">
+        </div>
+        <div>
+            <h1 itemprop="name">Centrum Zdraví</h1>
+            <p itemprop="description">Poskytujeme moderní zdravotní péči s důrazem na lidský přístup a inovace.</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <ul class="main-nav">
+                <li><a href="index.html">Domů</a></li>
+                <li><a href="services.html">Služby</a></li>
+                <li><a href="doctors.html">Lékaři</a></li>
+                <li><a href="departments.html">Oddělení</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+            <div class="search-container">
+                <form action="search.html" method="get" class="search-form">
+                    <input type="text" name="q" placeholder="Vyhledat lékaře, služby..." class="search-input">
+                    <button type="submit" class="search-button">🔍</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="breadcrumb">
+            <a href="index.html">Domů</a> > <a href="services.html">Služby</a> > <span>Obecná prohlídka</span>
+        </div>
+        <section class="service-detail-header">
+            <div class="service-header-content">
+                <h1>Obecná prohlídka</h1>
+                <p class="service-subtitle">Komplexní zdravotní prohlídka s krevními testy a konzultací</p>
+                <div class="service-badges">
+                    <span class="appointment-type required">🔴 Po domluvě</span>
+                    <span class="service-duration">⏱️ 30 minut</span>
+                    <span class="service-price">💰 500.00 Kč</span>
+                </div>
+            </div>
+            <div class="service-actions-header">
+                <a href="booking.html?service=obecna-prohlidka" class="booking-button">Rezervovat termín</a>
+            </div>
+        </section>
+
+        <section class="service-detail-content">
+            <div class="detail-grid">
+                <div class="detail-main">
+                    <h2>Popis služby</h2>
+                    <p>Obecná prohlídka je základní preventivní vyšetření, které zahrnuje komplexní posouzení vašeho zdravotního stavu. Tato služba je vhodná pro pravidelné kontroly zdraví, preventivní prohlídky a základní diagnostiku běžných onemocnění.</p>
+                    
+                    <h3>Co vyšetření zahrnuje:</h3>
+                    <ul class="service-features">
+                        <li>Anamnéza - rozhovor o vašich obtížích a zdravotní historii</li>
+                        <li>Fyzikální vyšetření - poslech srdce a plic, vyšetření břicha</li>
+                        <li>Měření krevního tlaku a pulsu</li>
+                        <li>Základní laboratorní vyšetření krve</li>
+                        <li>Vyšetření moči</li>
+                        <li>Konzultace výsledků a doporučení</li>
+                    </ul>
+
+                    <h3>Příprava na vyšetření:</h3>
+                    <p>Před vyšetřením doporučujeme:</p>
+                    <ul>
+                        <li>Nepít alkohol 24 hodin před vyšetřením</li>
+                        <li>Být nalačno (nejíst 8-12 hodin před odběrem krve)</li>
+                        <li>Přinést si seznam užívaných léků</li>
+                        <li>Přinést si výsledky předchozích vyšetření</li>
+                    </ul>
+
+                    <h3>Výsledky vyšetření:</h3>
+                    <p>Výsledky laboratorních vyšetření obdržíte do 3 pracovních dnů. V případě naléhavých nálezů vás budeme kontaktovat okamžitě.</p>
+                </div>
+
+                <div class="detail-sidebar">
+                    <div class="doctor-card-sidebar">
+                        <h3>Lékař</h3>
+                        <div class="doctor-photo-sidebar">
+                            <div class="photo-placeholder">👨‍⚕️</div>
+                        </div>
+                        <h4>MUDr. Jan Novák</h4>
+                        <p class="specialty">Všeobecná medicína</p>
+                        <p class="experience">15 let praxe</p>
+                        <div class="languages">
+                            <span class="language-tag">Čeština</span>
+                            <span class="language-tag">Angličtina</span>
+                        </div>
+                        <a href="doctor-detail.html?id=jan-novak" class="btn-secondary">Profil lékaře</a>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>📋 Důležité informace</h3>
+                        <p><strong>Délka vyšetření:</strong> 30 minut</p>
+                        <p><strong>Cena:</strong> 500.00 Kč</p>
+                        <p><strong>Pojišťovna:</strong> Ano</p>
+                        <p><strong>Věk pacienta:</strong> 18+ let</p>
+                        <p><strong>Frekvence:</strong> Doporučeno 1x ročně</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>🕒 Ordinační hodiny</h3>
+                        <p><strong>Pondělí:</strong> 8:00 - 16:00</p>
+                        <p><strong>Úterý:</strong> 8:00 - 16:00</p>
+                        <p><strong>Středa:</strong> 8:00 - 16:00</p>
+                        <p><strong>Čtvrtek:</strong> 8:00 - 16:00</p>
+                        <p><strong>Pátek:</strong> 8:00 - 16:00</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="related-services">
+            <h2>Související služby</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-header">
+                        <h3>Dětská péče</h3>
+                        <span class="appointment-type optional">🟡 Volně</span>
+                    </div>
+                    <p>Preventivní prohlídky a očkování pro děti do 15 let</p>
+                    <div class="service-details">
+                        <p><strong>Délka:</strong> 45 minut</p>
+                        <p><strong>Cena:</strong> 700.00 Kč</p>
+                    </div>
+                    <div class="service-actions">
+                        <a href="service-detail.html?id=detska-pece" class="btn-secondary">Více informací</a>
+                        <a href="booking.html?service=detska-pece" class="btn-primary">Rezervovat</a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-header">
+                        <h3>Kardiologie</h3>
+                        <span class="appointment-type required">🔴 Po domluvě</span>
+                    </div>
+                    <p>Vyšetření srdce a cévního systému</p>
+                    <div class="service-details">
+                        <p><strong>Délka:</strong> 45 minut</p>
+                        <p><strong>Cena:</strong> 1100.00 Kč</p>
+                    </div>
+                    <div class="service-actions">
+                        <a href="service-detail.html?id=kardiologie" class="btn-secondary">Více informací</a>
+                        <a href="booking.html?service=kardiologie" class="btn-primary">Rezervovat</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-columns">
+            <div class="footer-section" itemscope itemtype="http://schema.org/PostalAddress">
+                <h3>Kontakt</h3>
+                <address itemprop="address">
+                    <p itemprop="streetAddress">Nemocniční 1</p>
+                    <p><span itemprop="addressLocality">Praha 9</span>, <span itemprop="postalCode">19000</span></p>
+                    <p itemprop="addressCountry">Česká Republika</p>
+                    <p>Tel: <span itemprop="telephone">+420123456789</span></p>
+                    <p>Email: info@centrumzdravi.cz</p>
+                </address>
+            </div>
+
+            <div class="footer-section">
+                <h3>Služby</h3>
+                <ul id="footerServices" class="footer-services">
+                    <li><a href="services.html#obecnaProhlidka">Obecná prohlídka</a></li>
+                    <li><a href="services.html#detskaPece">Dětská péče</a></li>
+                    <li><a href="services.html#zubniOrdinace">Zubní ordinace</a></li>
+                    <li><a href="services.html#dermatologie">Dermatologie</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Sledujte nás</h3>
+                <ul id="footerSocial" class="social-links">
+                    <li>
+                        <a href="https://threads.com/centrumzdravi" target="_blank">
+                            <img src="assets/threads.png" alt="threads" width="20">
+                            Threads
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/centrumzdravi" target="_blank">
+                            <img src="assets/twitter.png" alt="twitter" width="20">
+                            Twitter
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com/centrumzdravi" target="_blank">
+                            <img src="assets/instagram.png" alt="instagram" width="20">
+                            Instagram
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://facebook.com/centrumzdravi" target="_blank">
+                            <img src="assets/facebook.png" alt="facebook" width="20">
+                            Facebook
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Otevírací doba</h3>
+                <div id="footerOpeningHours" itemprop="openingHoursSpecification">
+                    <p><strong>Pondělí-Pátek:</strong> 08:00 - 18:00</p>
+                    <p><strong>Sobota:</strong> 09:00 - 14:00</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="legal-info">
+            <div class="student-project-notice">
+                <p><strong>🎓 Studentský projekt</strong> - Tento web byl vytvořen jako součást školního projektu</p>
+            </div>
+            <p>&copy; 2025 Centrum Zdraví. Všechna práva vyhrazena.</p>
+            <div class="authors">
+                <p><strong>Autoři:</strong> Jan Novák, Eva Svobodová, Petr Horák</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

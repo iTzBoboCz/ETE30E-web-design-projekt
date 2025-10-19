@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Služby - Centrum Zdraví</title>
+    <meta name="description" content="Kompletní přehled zdravotních služeb nabízených Centrem Zdraví.">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body itemscope itemtype="http://schema.org/MedicalOrganization">
+    <header>
+        <div>
+            <img src="./Assets/health.png" alt="Logo" itemprop="logo">
+        </div>
+        <div>
+            <h1 itemprop="name">Centrum Zdraví</h1>
+            <p itemprop="description">Poskytujeme moderní zdravotní péči s důrazem na lidský přístup a inovace.</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <ul class="main-nav">
+                <li><a href="index.html">Domů</a></li>
+                <li><a href="services.html" class="active">Služby</a></li>
+                <li><a href="doctors.html">Lékaři</a></li>
+                <li><a href="departments.html">Oddělení</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+            <div class="search-container">
+                <form action="search.html" method="get" class="search-form">
+                    <input type="text" name="q" placeholder="Vyhledat lékaře, služby..." class="search-input">
+                    <button type="submit" class="search-button">🔍</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="breadcrumb">
+            <a href="index.html">Domů</a> > <span>Služby</span>
+        </div>
+        <section>
+            <div class="section-header">
+                <h1>Naše služby</h1>
+                <a href="booking.html" class="booking-button">Rezervovat návštěvu</a>
+            </div>
+            <p>Centrum Zdraví nabízí širokou škálu zdravotních služeb. Všechny naše služby jsou poskytovány kvalifikovanými odborníky s moderním vybavením.</p>
+        </section>
+
+        <section class="services-grid">
+            <div class="service-card" id="obecnaProhlidka">
+                <div class="service-header">
+                    <h3>Obecná prohlídka</h3>
+                    <span class="appointment-type required">🔴 Po domluvě</span>
+                </div>
+                <p>Kompletní zdravotní prohlídka s krevními testy a konzultací.</p>
+                <div class="service-details">
+                    <p><strong>Délka:</strong> 30 minut</p>
+                    <p><strong>Cena:</strong> 500.00 Kč</p>
+                    <div class="doctor-info">
+                        <p><strong>Lékař:</strong> MUDr. Jan Novák (Všeobecná medicína)</p>
+                        <p><strong>Jazyky:</strong> Čeština, Angličtina</p>
+                    </div>
+                </div>
+                <div class="service-actions">
+                    <a href="service-detail.html?id=obecnaProhlidka" class="btn-secondary">Více informací</a>
+                    <a href="booking.html?service=obecnaProhlidka" class="btn-primary">Rezervovat</a>
+                </div>
+            </div>
+
+            <div class="service-card" id="detskaPece">
+                <div class="service-header">
+                    <h3>Dětská péče</h3>
+                    <span class="appointment-type optional">🟡 Volně</span>
+                </div>
+                <p>Preventivní prohlídky a očkování pro děti do 15 let</p>
+                <div class="service-details">
+                    <p><strong>Délka:</strong> 45 minut</p>
+                    <p><strong>Cena:</strong> 700.00 Kč</p>
+                    <div class="doctor-info">
+                        <p><strong>Lékař:</strong> MUDr. Eva Svobodová (Pediatrie)</p>
+                        <p><strong>Jazyky:</strong> Čeština, Němčina</p>
+                    </div>
+                </div>
+                <div class="service-actions">
+                    <a href="service-detail.html?id=detskaPece" class="btn-secondary">Více informací</a>
+                    <a href="booking.html?service=detskaPece" class="btn-primary">Rezervovat</a>
+                </div>
+            </div>
+
+            <div class="service-card" id="zubniOrdinace">
+                <div class="service-header">
+                    <h3>Zubní ordinace</h3>
+                    <span class="appointment-type walk-in">🟢 Bez objednání</span>
+                </div>
+                <p>Preventivní prohlídky a základní stomatologické výkony</p>
+                <div class="service-details">
+                    <p><strong>Délka:</strong> 60 minut</p>
+                    <p><strong>Cena:</strong> 1200.00 Kč</p>
+                    <div class="doctor-info">
+                        <p><strong>Lékař:</strong> MDDr. Petr Horák (Stomatologie)</p>
+                        <p><strong>Jazyky:</strong> Čeština, Španělština</p>
+                    </div>
+                </div>
+                <div class="service-actions">
+                    <a href="service-detail.html?id=zubniOrdinace" class="btn-secondary">Více informací</a>
+                    <a href="booking.html?service=zubniOrdinace" class="btn-primary">Rezervovat</a>
+                </div>
+            </div>
+
+            <div class="service-card" id="dermatologie">
+                <div class="service-header">
+                    <h3>Dermatologie</h3>
+                    <span class="appointment-type required">🔴 Po domluvě</span>
+                </div>
+                <p>Diagnostika a léčba kožních onemocnění</p>
+                <div class="service-details">
+                    <p><strong>Délka:</strong> 40 minut</p>
+                    <p><strong>Cena:</strong> 900.00 Kč</p>
+                    <div class="doctor-info">
+                        <p><strong>Lékař:</strong> MUDr. Anna Černá (Dermatologie)</p>
+                        <p><strong>Jazyky:</strong> Čeština, Angličtina, Francouzština</p>
+                    </div>
+                </div>
+                <div class="service-actions">
+                    <a href="service-detail.html?id=dermatologie" class="btn-secondary">Více informací</a>
+                    <a href="booking.html?service=dermatologie" class="btn-primary">Rezervovat</a>
+                </div>
+            </div>
+
+            <div class="service-card" id="fyzioterapie">
+                <div class="service-header">
+                    <h3>Fyzioterapie</h3>
+                    <span class="appointment-type required">🔴 Po domluvě</span>
+                </div>
+                <p>Rehabilitační cvičení a léčebná masáž</p>
+                <div class="service-details">
+                    <p><strong>Délka:</strong> 50 minut</p>
+                    <p><strong>Cena:</strong> 800.00 Kč</p>
+                    <div class="doctor-info">
+                        <p><strong>Terapeut:</strong> Bc. Tomáš Kratochvíl (Fyzioterapie)</p>
+                        <p><strong>Jazyky:</strong> Čeština, Angličtina</p>
+                    </div>
+                </div>
+                <div class="service-actions">
+                    <a href="service-detail.html?id=fyzioterapie" class="btn-secondary">Více informací</a>
+                    <a href="booking.html?service=fyzioterapie" class="btn-primary">Rezervovat</a>
+                </div>
+            </div>
+
+            <div class="service-card" id="kardiologie">
+                <div class="service-header">
+                    <h3>Kardiologie</h3>
+                    <span class="appointment-type required">🔴 Po domluvě</span>
+                </div>
+                <p>Vyšetření srdce a cévního systému</p>
+                <div class="service-details">
+                    <p><strong>Délka:</strong> 45 minut</p>
+                    <p><strong>Cena:</strong> 1100.00 Kč</p>
+                    <div class="doctor-info">
+                        <p><strong>Lékař:</strong> MUDr. Pavel Dvořák (Kardiologie)</p>
+                        <p><strong>Jazyky:</strong> Čeština, Angličtina</p>
+                    </div>
+                </div>
+                <div class="service-actions">
+                    <a href="service-detail.html?id=kardiologie" class="btn-secondary">Více informací</a>
+                    <a href="booking.html?service=kardiologie" class="btn-primary">Rezervovat</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-section">
+            <h2>Důležité informace</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>🕒 Ordinační hodiny</h3>
+                    <p><strong>Pondělí-Pátek:</strong> 08:00 - 18:00</p>
+                    <p><strong>Sobota:</strong> 09:00 - 14:00</p>
+                    <p><strong>Neděle:</strong> Zavřeno</p>
+                </div>
+                <div class="info-card">
+                    <h3>📞 Nouzové kontakty</h3>
+                    <p><strong>Recepce:</strong> +420 123 456 789</p>
+                    <p><strong>Nouzová linka:</strong> +420 123 456 790</p>
+                    <p><strong>Email:</strong> info@centrumzdravi.cz</p>
+                </div>
+                <div class="info-card">
+                    <h3>💳 Platební metody</h3>
+                    <p>Hotovost, karta, pojišťovna</p>
+                    <p>Všechny hlavní pojišťovny</p>
+                    <p>Možnost splátkového placení</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-columns">
+            <div class="footer-section" itemscope itemtype="http://schema.org/PostalAddress">
+                <h3>Kontakt</h3>
+                <address itemprop="address">
+                    <p itemprop="streetAddress">Nemocniční 1</p>
+                    <p><span itemprop="addressLocality">Praha 9</span>, <span itemprop="postalCode">19000</span></p>
+                    <p itemprop="addressCountry">Česká Republika</p>
+                    <p>Tel: <span itemprop="telephone">+420123456789</span></p>
+                    <p>Email: info@centrumzdravi.cz</p>
+                </address>
+            </div>
+
+            <div class="footer-section">
+                <h3>Služby</h3>
+                <ul id="footerServices" class="footer-services">
+                    <li><a href="services.html#obecnaProhlidka">Obecná prohlídka</a></li>
+                    <li><a href="services.html#detskaPece">Dětská péče</a></li>
+                    <li><a href="services.html#zubniOrdinace">Zubní ordinace</a></li>
+                    <li><a href="services.html#dermatologie">Dermatologie</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Sledujte nás</h3>
+                <ul id="footerSocial" class="social-links">
+                    <li>
+                        <a href="https://threads.com/centrumzdravi" target="_blank">
+                            <img src="assets/threads.png" alt="threads" width="20">
+                            Threads
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/centrumzdravi" target="_blank">
+                            <img src="assets/twitter.png" alt="twitter" width="20">
+                            Twitter
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com/centrumzdravi" target="_blank">
+                            <img src="assets/instagram.png" alt="instagram" width="20">
+                            Instagram
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://facebook.com/centrumzdravi" target="_blank">
+                            <img src="assets/facebook.png" alt="facebook" width="20">
+                            Facebook
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Otevírací doba</h3>
+                <div id="footerOpeningHours" itemprop="openingHoursSpecification">
+                    <p><strong>Pondělí-Pátek:</strong> 08:00 - 18:00</p>
+                    <p><strong>Sobota:</strong> 09:00 - 14:00</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="legal-info">
+            <div class="student-project-notice">
+                <p><strong>🎓 Studentský projekt</strong> - Tento web byl vytvořen jako součást školního projektu</p>
+            </div>
+            <p>&copy; 2025 Centrum Zdraví. Všechna práva vyhrazena.</p>
+            <div class="authors">
+                <p><strong>Autoři:</strong> Jan Novák, Eva Svobodová, Petr Horák</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centrum Zdraví</title>
+    <meta name="description"
+        content="Centrum Zdraví nabízí komplexní zdravotní služby a aktuální novinky ze světa medicíny.">
+    <!-- Open Graph meta tags -->
+    <meta property="og:title" content="Centrum Zdraví">
+    <meta property="og:description" content="Vaše spolehlivá zdravotní instituce v srdci města.">
+    <meta property="og:image" content="health.jpg">
+    <meta property="og:url" content="http://www.centrumzdravi.cz">
+
+    <link rel="stylesheet" href="style.css">
+    <!-- JSON-LD Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "MedicalOrganization",
+        "name": "Centrum Zdraví",
+        "url": "http://www.centrumzdravi.cz",
+        "telephone": "+420123456789"
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Nemocniční 1",
+            "addressLocality": "Praha 9",
+            "postalCode": "19000",
+            "addressCountry": "CZ"
+        },
+        "socials": [
+            "https://facebook.com/centrumzdravi",
+            "https://twitter.com/centrumzdravi",
+            "https://instagram.com/centrumzdravi",
+            "https://threads.com/centrumzdravi"
+        ]
+    }
+    </script>
+</head>
+
+<body itemscope itemtype="http://schema.org/MedicalOrganization">
+    <header>
+        <div>
+            <img src="./Assets/health.png" alt="Logo" itemprop="logo">
+        </div>
+        <div>
+            <h1 itemprop="name">Centrum Zdraví</h1>
+            <p itemprop="description">Poskytujeme moderní zdravotní péči s důrazem na lidský přístup a inovace.</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <ul class="main-nav">
+                <li><a href="index.html">Domů</a></li>
+                <li><a href="services.html">Služby</a></li>
+                <li><a href="doctors.html">Lékaři</a></li>
+                <li><a href="departments.html">Oddělení</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+            <div class="search-container">
+                <form action="search.html" method="get" class="search-form">
+                    <input type="text" name="q" placeholder="Vyhledat lékaře, služby..." class="search-input">
+                    <button type="submit" class="search-button">🔍</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <nav aria-label="Breadcrumb" class="breadcrumb">
+            <a href="index.html">Domů</a>
+        </nav>
+        <section id="news" aria-labelledby="news-heading">
+            <h2 id="news-heading">Novinky</h2>
+            <article class="services-articles">
+                <div class="article-header">
+                    <h3>Nová služba v centru</h3>
+                    <span class="importance-marker important">Důležité</span>
+                </div>
+                <p>Centrum Zdraví rozšiřuje své služby o fyzioterapii.</p>
+                <time datetime="2025-01-01">1. ledna 2025</time>
+            </article>
+            <article class="services-articles">
+                <div class="article-header">
+                    <h3>Nové vybavení</h3>
+                </div>
+                <p>Pořídili jsme nový ultrazvukový přístroj nejnovější generace.</p>
+                <time datetime="2024-12-24">24. prosince 2024</time>
+            </article>
+            <article class="services-articles">
+                <div class="article-header">
+                    <h3>Letní ordinační hodiny</h3>
+                </div>
+                <p>Od 1.3. do 31.3. máme prodloužené ordinační hodiny.</p>
+                <time datetime="2025-02-02">2. února 2025</time>
+            </article>
+        </section>
+
+        <section id="services" aria-labelledby="services-heading">
+            <div class="section-header">
+                <h2 id="services-heading">Služby</h2>
+                <a href="booking.html" class="booking-button" aria-label="Rezervovat návštěvu u lékaře">Rezervovat návštěvu</a>
+            </div>
+            <div class="services-articles" id="obecnaProhlidka">
+                <div class="service-header">
+                    <h3>Obecná prohlídka</h3>
+                    <span class="appointment-type required">🔴 Po domluvě</span>
+                </div>
+                <p>Komplexní zdravotní prohlídka s krevními testy a konzultací.</p>
+                <div>
+                    <p><strong>Délka:</strong> 30 minut</p>
+                    <p><strong>Cena:</strong> 500.00 Kč</p>
+                    <div class="doctor-info">
+                        <p><strong>Lékař:</strong>MUDr. Jan Novák (Všeobecná medicína)</p>
+                        <p><strong>Jazyky:</strong> Čeština, Angličtina</p>
+                    </div>
+                </div>
+            </div>
+            <div class="services-articles" id="detskaPece">
+                <div class="service-header">
+                    <h3>Dětská péče</h3>
+                    <span class="appointment-type optional">🟡 Volně</span>
+                </div>
+                <p>Preventivní prohlídky a očkování pro děti do 15 let</p>
+                <div>
+                    <p><strong>Délka:</strong> 45 minut</p>
+                    <p><strong>Cena:</strong> 700.00 Kč</p>
+                    <div class="doctor-info">
+                        <p><strong>Lékař:</strong> MUDr. Eva Svobodová (Pediatrie)</p>
+                        <p><strong>Jazyky:</strong> Čeština, Němčina</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="services-articles" id="zubniOrdinace">
+                <div class="service-header">
+                    <h3>Zubní ordinace</h3>
+                    <span class="appointment-type walk-in">🟢 Bez objednání</span>
+                </div>
+                <p>Preventivní prohlídky a základní stomatologické výkony</p>
+                <div>
+                    <p><strong>Délka:</strong> 60 minut</p>
+                    <p><strong>Cena:</strong> 1200.00 Kč</p>
+                    <div class="doctor-info">
+                        <p><strong>Lékař:</strong> MDDr. Petr Horák (Stomatologie)</p>
+                        <p><strong>Jazyky:</strong> Čeština, Španělština</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="about" aria-labelledby="about-heading">
+            <h2 id="about-heading">O nás</h2>
+            <article class="services-articles">
+                <h3>Naše mise</h3>
+                <p>Centrum Zdraví se zaměřuje na inovativní přístupy ve zdravotní péči.</p>
+                <time datetime="2025-01-01">1. ledna 2025</time>
+            </article>
+            <article class="services-articles">
+                <h3>Historie</h3>
+                <p>Od založení v roce 2020 jsme neustále rozšiřovali nabídku služeb.</p>
+                <time datetime="2025-01-01">1. ledna 2025</time>
+            </article>
+        </section>
+
+        <aside aria-labelledby="map-heading">
+            <h2 id="map-heading">Najdete nás na mapě</h2>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2558.749411448811!2d14.504161277601462!3d50.10969721183902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470becc8d929c403%3A0xb1990734f48f2d7d!2sNemocni%C4%8Dn%C3%AD%201%2C%20190%2000%20Praha%209!5e0!3m2!1scs!2scz!4v1740347499134!5m2!1scs!2scz"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p>(Ukázková lokalita - mapa ilustrační)</p>
+        </aside>
+    </main>
+
+    <footer>
+        <div class="footer-columns">
+            <div class="footer-section" itemscope itemtype="http://schema.org/PostalAddress">
+                <h3>Kontakt</h3>
+                <address itemprop="address">
+                    <p itemprop="streetAddress">Nemocniční 1</p>
+                    <p><span itemprop="addressLocality">Praha 9</span>, <span itemprop="postalCode">19000</span></p>
+                    <p itemprop="addressCountry">Česká Republika</p>
+                    <p>Tel: <span itemprop="telephone">+420123456789</span></p>
+                    <p>Email: info@centrumzdravi.cz</p>
+                </address>
+            </div>
+
+            <div class="footer-section">
+                <h3>Služby</h3>
+                <ul id="footerServices" class="footer-services">
+                    <li>
+                        <a href="#obecnaProhlidka">Obecná prohlídka</a>
+                    </li>
+                    <li>
+                        <a href="#detskaPece">Dětská péče</a>
+                    </li>
+                    <li>
+                        <a href="#zubniOrdinace">Zubní ordinace</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Sledujte nás</h3>
+                <ul id="footerSocial" class="social-links">
+                    <li>
+                        <a href="https://threads.com/centrumzdravi" target="_blank">
+                            <img src="assets/threads.png" alt="threads" width="20">
+                            Threads
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/centrumzdravi" target="_blank">
+                            <img src="assets/twitter.png" alt="twitter" width="20">
+                            Twitter
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com/centrumzdravi" target="_blank">
+                            <img src="assets/instagram.png" alt="$instagram" width="20">
+                            Instagram
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://facebook.com/centrumzdravi" target="_blank">
+                            <img src="assets/facebook.png" alt="facebook" width="20">
+                            Facebook
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Otevírací doba</h3>
+                <div id="footerOpeningHours" itemprop="openingHoursSpecification">
+                    <p><strong>Pondělí-Pátek:</strong>
+                        08:00 - 18:00
+                    </p>
+                    <p><strong>Sobota</strong>
+                        09:00 - 14:00
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="legal-info">
+            <div class="student-project-notice">
+                <p><strong>🎓 Studentský projekt</strong> - Tento web byl vytvořen jako součást školního projektu</p>
+            </div>
+            <p>&copy; 2025 Centrum Zdraví. Všechna práva vyhrazena.</p>
+            <div class="authors">
+                <p><strong>Autoři:</strong> Jan Novák, Eva Svobodová, Petr Horák</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

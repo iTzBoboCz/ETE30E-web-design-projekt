@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oddělení - Centrum Zdraví</title>
+    <meta name="description" content="Přehled lékařských oddělení a specializací Centra Zdraví.">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body itemscope itemtype="http://schema.org/MedicalOrganization">
+    <header>
+        <div>
+            <img src="./Assets/health.png" alt="Logo" itemprop="logo">
+        </div>
+        <div>
+            <h1 itemprop="name">Centrum Zdraví</h1>
+            <p itemprop="description">Poskytujeme moderní zdravotní péči s důrazem na lidský přístup a inovace.</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <ul class="main-nav">
+                <li><a href="index.html">Domů</a></li>
+                <li><a href="services.html">Služby</a></li>
+                <li><a href="doctors.html">Lékaři</a></li>
+                <li><a href="departments.html" class="active">Oddělení</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+            <div class="search-container">
+                <form action="search.html" method="get" class="search-form">
+                    <input type="text" name="q" placeholder="Vyhledat lékaře, služby..." class="search-input">
+                    <button type="submit" class="search-button">🔍</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="breadcrumb">
+            <a href="index.html">Domů</a> > <span>Oddělení</span>
+        </div>
+        <section>
+            <div class="section-header">
+                <h1>Lékařská oddělení</h1>
+                <a href="booking.html" class="booking-button">Rezervovat návštěvu</a>
+            </div>
+            <p>Centrum Zdraví je rozděleno do specializovaných oddělení, která poskytují komplexní péči v různých oblastech medicíny. Každé oddělení je vybaveno moderní technikou a zaměstnává zkušené odborníky.</p>
+        </section>
+
+        <section class="departments-grid">
+            <div class="department-card">
+                <div class="department-card-header">
+                    <div class="department-icon">🏥</div>
+                    <div class="department-content">
+                        <h3>Všeobecné lékařství</h3>
+                        <p class="department-description">Základní zdravotní péče pro dospělé pacienty, preventivní prohlídky a léčba běžných onemocnění.</p>
+                        <div class="department-details">
+                            <p><strong>Vedoucí:</strong> MUDr. Jan Novák</p>
+                            <p><strong>Počet lékařů:</strong> 3</p>
+                            <p><strong>Ordinační hodiny:</strong> Po-Pá 8:00-18:00</p>
+                        </div>
+                        <div class="department-services">
+                            <span class="service-tag">Preventivní prohlídky</span>
+                            <span class="service-tag">Léčba akutních stavů</span>
+                            <span class="service-tag">Chronická onemocnění</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="department-actions">
+                    <a href="department-detail.html" class="btn-secondary">Více informací</a>
+                    <a href="booking.html?department=vseobecne" class="btn-primary">Rezervovat</a>
+                </div>
+            </div>
+
+            <div class="department-card">
+                <div class="department-card-header">
+                    <div class="department-icon">👶</div>
+                    <div class="department-content">
+                        <h3>Pediatrie</h3>
+                        <p class="department-description">Komplexní zdravotní péče pro děti od narození do 18 let věku.</p>
+                        <div class="department-details">
+                            <p><strong>Vedoucí:</strong> MUDr. Eva Svobodová</p>
+                            <p><strong>Počet lékařů:</strong> 2</p>
+                            <p><strong>Ordinační hodiny:</strong> Po-Pá 8:00-17:00</p>
+                        </div>
+                        <div class="department-services">
+                            <span class="service-tag">Preventivní prohlídky</span>
+                            <span class="service-tag">Očkování</span>
+                            <span class="service-tag">Léčba dětských onemocnění</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="department-actions">
+                    <a href="department-detail.html?id=pediatrie" class="btn-secondary">Více informací</a>
+                    <a href="booking.html?department=pediatrie" class="btn-primary">Rezervovat</a>
+                </div>
+            </div>
+
+            <div class="department-card">
+                <div class="department-card-header">
+                    <div class="department-icon">🦷</div>
+                    <div class="department-content">
+                        <h3>Stomatologie</h3>
+                        <p class="department-description">Kompletní zubní péče včetně preventivních prohlídek, léčby a estetické stomatologie.</p>
+                        <div class="department-details">
+                            <p><strong>Vedoucí:</strong> MDDr. Petr Horák</p>
+                            <p><strong>Počet lékařů:</strong> 2</p>
+                            <p><strong>Ordinační hodiny:</strong> Po-Pá 8:00-18:00, So 9:00-14:00</p>
+                        </div>
+                        <div class="department-services">
+                            <span class="service-tag">Preventivní prohlídky</span>
+                            <span class="service-tag">Estetická stomatologie</span>
+                            <span class="service-tag">Implantologie</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="department-actions">
+                    <a href="department-detail.html?id=stomatologie" class="btn-secondary">Více informací</a>
+                    <a href="booking.html?department=stomatologie" class="btn-primary">Rezervovat</a>
+                </div>
+            </div>
+
+            <div class="department-card">
+                <div class="department-card-header">
+                    <div class="department-icon">🧴</div>
+                    <div class="department-content">
+                        <h3>Dermatologie</h3>
+                        <p class="department-description">Diagnostika a léčba kožních onemocnění, estetická dermatologie a laserové ošetření.</p>
+                        <div class="department-details">
+                            <p><strong>Vedoucí:</strong> MUDr. Anna Černá</p>
+                            <p><strong>Počet lékařů:</strong> 1</p>
+                            <p><strong>Ordinační hodiny:</strong> Po, St, Pá 9:00-16:00</p>
+                        </div>
+                        <div class="department-services">
+                            <span class="service-tag">Léčba kožních onemocnění</span>
+                            <span class="service-tag">Estetická dermatologie</span>
+                            <span class="service-tag">Laserové ošetření</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="department-actions">
+                    <a href="department-detail.html?id=dermatologie" class="btn-secondary">Více informací</a>
+                    <a href="booking.html?department=dermatologie" class="btn-primary">Rezervovat</a>
+                </div>
+            </div>
+
+            <div class="department-card">
+                <div class="department-card-header">
+                    <div class="department-icon">🏃‍♂️</div>
+                    <div class="department-content">
+                        <h3>Fyzioterapie</h3>
+                        <p class="department-description">Rehabilitační péče, léčebná masáž a cvičení pro obnovu pohybových funkcí.</p>
+                        <div class="department-details">
+                            <p><strong>Vedoucí:</strong> Bc. Tomáš Kratochvíl</p>
+                            <p><strong>Počet terapeutů:</strong> 2</p>
+                            <p><strong>Ordinační hodiny:</strong> Po-Pá 7:00-19:00</p>
+                        </div>
+                        <div class="department-services">
+                            <span class="service-tag">Rehabilitační cvičení</span>
+                            <span class="service-tag">Léčebná masáž</span>
+                            <span class="service-tag">Sportovní fyzioterapie</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="department-actions">
+                    <a href="department-detail.html?id=fyzioterapie" class="btn-secondary">Více informací</a>
+                    <a href="booking.html?department=fyzioterapie" class="btn-primary">Rezervovat</a>
+                </div>
+            </div>
+
+            <div class="department-card">
+                <div class="department-card-header">
+                    <div class="department-icon">❤️</div>
+                    <div class="department-content">
+                        <h3>Kardiologie</h3>
+                        <p class="department-description">Specializovaná péče o srdce a cévní systém, preventivní kardiologie a diagnostika.</p>
+                        <div class="department-details">
+                            <p><strong>Vedoucí:</strong> MUDr. Pavel Dvořák</p>
+                            <p><strong>Počet lékařů:</strong> 1</p>
+                            <p><strong>Ordinační hodiny:</strong> Út, Čt 9:00-15:00</p>
+                        </div>
+                        <div class="department-services">
+                            <span class="service-tag">EKG vyšetření</span>
+                            <span class="service-tag">Echokardiografie</span>
+                            <span class="service-tag">Holter monitoring</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="department-actions">
+                    <a href="department-detail.html?id=kardiologie" class="btn-secondary">Více informací</a>
+                    <a href="booking.html?department=kardiologie" class="btn-primary">Rezervovat</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-section">
+            <h2>Vybavení a technologie</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>🔬 Moderní diagnostika</h3>
+                    <p>Všechna oddělení jsou vybavena nejnovější diagnostickou technikou včetně ultrazvuku, EKG a laboratorních přístrojů.</p>
+                </div>
+                <div class="info-card">
+                    <h3>🏥 Komfortní prostředí</h3>
+                    <p>Příjemné a moderní ordinace s důrazem na pohodlí pacientů a soukromí během vyšetření.</p>
+                </div>
+                <div class="info-card">
+                    <h3>📋 Elektronická dokumentace</h3>
+                    <p>Všechna oddělení používají moderní elektronický systém pro vedení zdravotní dokumentace.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-columns">
+            <div class="footer-section" itemscope itemtype="http://schema.org/PostalAddress">
+                <h3>Kontakt</h3>
+                <address itemprop="address">
+                    <p itemprop="streetAddress">Nemocniční 1</p>
+                    <p><span itemprop="addressLocality">Praha 9</span>, <span itemprop="postalCode">19000</span></p>
+                    <p itemprop="addressCountry">Česká Republika</p>
+                    <p>Tel: <span itemprop="telephone">+420123456789</span></p>
+                    <p>Email: info@centrumzdravi.cz</p>
+                </address>
+            </div>
+
+            <div class="footer-section">
+                <h3>Služby</h3>
+                <ul id="footerServices" class="footer-services">
+                    <li><a href="services.html#obecnaProhlidka">Obecná prohlídka</a></li>
+                    <li><a href="services.html#detskaPece">Dětská péče</a></li>
+                    <li><a href="services.html#zubniOrdinace">Zubní ordinace</a></li>
+                    <li><a href="services.html#dermatologie">Dermatologie</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Sledujte nás</h3>
+                <ul id="footerSocial" class="social-links">
+                    <li>
+                        <a href="https://threads.com/centrumzdravi" target="_blank">
+                            <img src="assets/threads.png" alt="threads" width="20">
+                            Threads
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/centrumzdravi" target="_blank">
+                            <img src="assets/twitter.png" alt="twitter" width="20">
+                            Twitter
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com/centrumzdravi" target="_blank">
+                            <img src="assets/instagram.png" alt="instagram" width="20">
+                            Instagram
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://facebook.com/centrumzdravi" target="_blank">
+                            <img src="assets/facebook.png" alt="facebook" width="20">
+                            Facebook
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Otevírací doba</h3>
+                <div id="footerOpeningHours" itemprop="openingHoursSpecification">
+                    <p><strong>Pondělí-Pátek:</strong> 08:00 - 18:00</p>
+                    <p><strong>Sobota:</strong> 09:00 - 14:00</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="legal-info">
+            <div class="student-project-notice">
+                <p><strong>🎓 Studentský projekt</strong> - Tento web byl vytvořen jako součást školního projektu</p>
+            </div>
+            <p>&copy; 2025 Centrum Zdraví. Všechna práva vyhrazena.</p>
+            <div class="authors">
+                <p><strong>Autoři:</strong> Jan Novák, Eva Svobodová, Petr Horák</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

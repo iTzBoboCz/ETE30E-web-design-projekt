@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUDr. Jan Novák - Centrum Zdraví</title>
+    <meta name="description" content="Profil lékaře MUDr. Jana Nováka - specialisty na všeobecnou medicínu v Centru Zdraví.">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body itemscope itemtype="http://schema.org/MedicalOrganization">
+    <header>
+        <div>
+            <img src="./Assets/health.png" alt="Logo" itemprop="logo">
+        </div>
+        <div>
+            <h1 itemprop="name">Centrum Zdraví</h1>
+            <p itemprop="description">Poskytujeme moderní zdravotní péči s důrazem na lidský přístup a inovace.</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <ul class="main-nav">
+                <li><a href="index.html">Domů</a></li>
+                <li><a href="services.html">Služby</a></li>
+                <li><a href="doctors.html">Lékaři</a></li>
+                <li><a href="departments.html">Oddělení</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+            <div class="search-container">
+                <form action="search.html" method="get" class="search-form">
+                    <input type="text" name="q" placeholder="Vyhledat lékaře, služby..." class="search-input">
+                    <button type="submit" class="search-button">🔍</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="breadcrumb">
+            <a href="index.html">Domů</a> > <a href="doctors.html">Lékaři</a> > <span>MUDr. Jan Novák</span>
+        </div>
+
+        <article class="doctor-profile">
+            <header class="doctor-header">
+                <div class="doctor-photo-large">
+                    <div class="photo-placeholder-large">👨‍⚕️</div>
+                </div>
+                <div class="doctor-info-header">
+                    <h1>MUDr. Jan Novák</h1>
+                    <p class="specialty-large">Všeobecná medicína</p>
+                    <p class="experience-large">15 let praxe</p>
+                    <div class="languages-large">
+                        <span class="language-tag">Čeština</span>
+                        <span class="language-tag">Angličtina</span>
+                    </div>
+                    <div class="doctor-actions-header">
+                        <a href="booking.html?doctor=jan-novak" class="booking-button">Rezervovat termín</a>
+                        <a href="contact.html" class="btn-secondary">Kontaktovat</a>
+                    </div>
+                </div>
+            </header>
+
+            <section class="doctor-content">
+                <div class="content-grid">
+                    <div class="main-content">
+                        <section class="about-section">
+                            <h2>O lékaři</h2>
+                            <p>MUDr. Jan Novák je zkušený lékař se specializací na všeobecnou medicínu. Vystudoval Lékařskou fakultu Univerzity Karlovy v Praze a následně absolvoval specializační vzdělání v oboru všeobecné medicíny.</p>
+                            
+                            <p>Během své 15leté praxe se zaměřuje především na preventivní medicínu, léčbu chronických onemocnění a sportovní medicínu. Pravidelně se účastní odborných konferencí a seminářů, aby držel krok s nejnovějšími poznatky v medicíně.</p>
+
+                            <h3>Specializace</h3>
+                            <ul class="specialization-list">
+                                <li>Preventivní medicína a zdravotní prohlídky</li>
+                                <li>Léčba chronických onemocnění (diabetes, hypertenze)</li>
+                                <li>Sportovní medicína</li>
+                                <li>Léčba akutních stavů</li>
+                                <li>Očkování a cestovní medicína</li>
+                            </ul>
+                        </section>
+
+                        <section class="education-section">
+                            <h2>Vzdělání a kvalifikace</h2>
+                            <table class="education-table">
+                                <thead>
+                                    <tr>
+                                        <th>Rok</th>
+                                        <th>Instituce</th>
+                                        <th>Obor</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2008</td>
+                                        <td>Lékařská fakulta UK Praha</td>
+                                        <td>Všeobecné lékařství</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2012</td>
+                                        <td>VFN Praha</td>
+                                        <td>Specializace - Všeobecná medicína</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2015</td>
+                                        <td>ČLS JEP</td>
+                                        <td>Atestace - Všeobecná medicína</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2018</td>
+                                        <td>IMS Praha</td>
+                                        <td>Sportovní medicína</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+
+                        <section class="services-section">
+                            <h2>Poskytované služby</h2>
+                            <div class="services-grid">
+                                <article class="service-item">
+                                    <h3>Obecná prohlídka</h3>
+                                    <p>Komplexní zdravotní prohlídka s krevními testy a konzultací.</p>
+                                    <div class="service-details">
+                                        <p><strong>Délka:</strong> 30 minut</p>
+                                        <p><strong>Cena:</strong> 500.00 Kč</p>
+                                    </div>
+                                    <a href="service-detail.html?id=obecnaProhlidka" class="btn-secondary">Více informací</a>
+                                </article>
+
+                                <article class="service-item">
+                                    <h3>Sportovní prohlídka</h3>
+                                    <p>Specializovaná prohlídka pro sportovce a aktivní jedince.</p>
+                                    <div class="service-details">
+                                        <p><strong>Délka:</strong> 45 minut</p>
+                                        <p><strong>Cena:</strong> 800.00 Kč</p>
+                                    </div>
+                                    <a href="booking.html?service=sportovni" class="btn-primary">Rezervovat</a>
+                                </article>
+                            </div>
+                        </section>
+                    </div>
+
+                    <aside class="sidebar">
+                        <section class="schedule-section">
+                            <h3>Ordinační hodiny</h3>
+                            <table class="schedule-table">
+                                <tbody>
+                                    <tr>
+                                        <td>Pondělí</td>
+                                        <td>8:00 - 16:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Úterý</td>
+                                        <td>8:00 - 16:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Středa</td>
+                                        <td>8:00 - 16:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Čtvrtek</td>
+                                        <td>8:00 - 16:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pátek</td>
+                                        <td>8:00 - 16:00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+
+                        <section class="contact-section">
+                            <h3>Kontakt</h3>
+                            <div class="contact-info">
+                                <p><strong>Telefon:</strong> +420 123 456 789</p>
+                                <p><strong>Email:</strong> novak@centrumzdravi.cz</p>
+                                <p><strong>Ordinace:</strong> 1. patro, místnost 101</p>
+                            </div>
+                        </section>
+
+                        <section class="certifications-section">
+                            <h3>Certifikace</h3>
+                            <ul class="certifications-list">
+                                <li>ČLS JEP - Všeobecná medicína</li>
+                                <li>ČAS - Sportovní medicína</li>
+                                <li>ISO 9001 - Kvalita služeb</li>
+                                <li>BLS - Základní podpora života</li>
+                            </ul>
+                        </section>
+
+                        <section class="reviews-section">
+                            <h3>Hodnocení pacientů</h3>
+                            <div class="rating">
+                                <div class="stars">★★★★★</div>
+                                <p class="rating-text">4.8/5 (127 hodnocení)</p>
+                            </div>
+                            <blockquote class="review">
+                                <p>"Výborný lékař s lidským přístupem. Vždy si najde čas na vysvětlení a je velmi trpělivý."</p>
+                                <cite>- Marie Svobodová</cite>
+                            </blockquote>
+                        </section>
+                    </aside>
+                </div>
+            </section>
+        </article>
+
+        <section class="related-doctors">
+            <h2>Další lékaři</h2>
+            <div class="doctors-grid">
+                <article class="doctor-card">
+                    <div class="doctor-photo">
+                        <div class="photo-placeholder">👩‍⚕️</div>
+                    </div>
+                    <div class="doctor-info">
+                        <h3>MUDr. Eva Svobodová</h3>
+                        <p class="specialty">Pediatrie</p>
+                        <p class="experience">12 let praxe</p>
+                        <div class="languages">
+                            <span class="language-tag">Čeština</span>
+                            <span class="language-tag">Němčina</span>
+                        </div>
+                        <div class="doctor-actions">
+                            <a href="doctor-detail.html?id=eva-svobodova" class="btn-secondary">Profil lékaře</a>
+                            <a href="booking.html?doctor=eva-svobodova" class="btn-primary">Rezervovat</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="doctor-card">
+                    <div class="doctor-photo">
+                        <div class="photo-placeholder">👨‍⚕️</div>
+                    </div>
+                    <div class="doctor-info">
+                        <h3>MDDr. Petr Horák</h3>
+                        <p class="specialty">Stomatologie</p>
+                        <p class="experience">18 let praxe</p>
+                        <div class="languages">
+                            <span class="language-tag">Čeština</span>
+                            <span class="language-tag">Španělština</span>
+                        </div>
+                        <div class="doctor-actions">
+                            <a href="doctor-detail.html?id=petr-horak" class="btn-secondary">Profil lékaře</a>
+                            <a href="booking.html?doctor=petr-horak" class="btn-primary">Rezervovat</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-columns">
+            <div class="footer-section" itemscope itemtype="http://schema.org/PostalAddress">
+                <h3>Kontakt</h3>
+                <address itemprop="address">
+                    <p itemprop="streetAddress">Nemocniční 1</p>
+                    <p><span itemprop="addressLocality">Praha 9</span>, <span itemprop="postalCode">19000</span></p>
+                    <p itemprop="addressCountry">Česká Republika</p>
+                    <p>Tel: <span itemprop="telephone">+420123456789</span></p>
+                    <p>Email: info@centrumzdravi.cz</p>
+                </address>
+            </div>
+
+            <div class="footer-section">
+                <h3>Služby</h3>
+                <ul id="footerServices" class="footer-services">
+                    <li><a href="services.html#obecnaProhlidka">Obecná prohlídka</a></li>
+                    <li><a href="services.html#detskaPece">Dětská péče</a></li>
+                    <li><a href="services.html#zubniOrdinace">Zubní ordinace</a></li>
+                    <li><a href="services.html#dermatologie">Dermatologie</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Sledujte nás</h3>
+                <ul id="footerSocial" class="social-links">
+                    <li>
+                        <a href="https://threads.com/centrumzdravi" target="_blank">
+                            <img src="assets/threads.png" alt="threads" width="20">
+                            Threads
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/centrumzdravi" target="_blank">
+                            <img src="assets/twitter.png" alt="twitter" width="20">
+                            Twitter
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com/centrumzdravi" target="_blank">
+                            <img src="assets/instagram.png" alt="instagram" width="20">
+                            Instagram
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://facebook.com/centrumzdravi" target="_blank">
+                            <img src="assets/facebook.png" alt="facebook" width="20">
+                            Facebook
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Otevírací doba</h3>
+                <div id="footerOpeningHours" itemprop="openingHoursSpecification">
+                    <p><strong>Pondělí-Pátek:</strong> 08:00 - 18:00</p>
+                    <p><strong>Sobota:</strong> 09:00 - 14:00</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="legal-info">
+            <div class="student-project-notice">
+                <p><strong>🎓 Studentský projekt</strong> - Tento web byl vytvořen jako součást školního projektu</p>
+            </div>
+            <p>&copy; 2025 Centrum Zdraví. Všechna práva vyhrazena.</p>
+            <div class="authors">
+                <p><strong>Autoři:</strong> Jan Novák, Eva Svobodová, Petr Horák</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

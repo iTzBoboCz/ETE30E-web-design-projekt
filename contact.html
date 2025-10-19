@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - Centrum Zdraví</title>
+    <meta name="description" content="Kontaktní informace, adresa a cesta k Centru Zdraví.">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body itemscope itemtype="http://schema.org/MedicalOrganization">
+    <header>
+        <div>
+            <img src="./Assets/health.png" alt="Logo" itemprop="logo">
+        </div>
+        <div>
+            <h1 itemprop="name">Centrum Zdraví</h1>
+            <p itemprop="description">Poskytujeme moderní zdravotní péči s důrazem na lidský přístup a inovace.</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <ul class="main-nav">
+                <li><a href="index.html">Domů</a></li>
+                <li><a href="services.html">Služby</a></li>
+                <li><a href="doctors.html">Lékaři</a></li>
+                <li><a href="departments.html">Oddělení</a></li>
+                <li><a href="contact.html" class="active">Kontakt</a></li>
+            </ul>
+            <div class="search-container">
+                <form action="search.html" method="get" class="search-form">
+                    <input type="text" name="q" placeholder="Vyhledat lékaře, služby..." class="search-input">
+                    <button type="submit" class="search-button">🔍</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="breadcrumb">
+            <a href="index.html">Domů</a> > <span>Kontakt</span>
+        </div>
+        <section>
+            <h1>Kontakt a cesta k nám</h1>
+            <p>Centrum Zdraví se nachází v centru Prahy s výbornou dostupností veřejnou dopravou i autem. Jsme vám k dispozici pro jakékoli dotazy nebo objednání.</p>
+        </section>
+
+        <section class="contact-grid">
+            <div class="contact-card">
+                <h2>📍 Adresa</h2>
+                <div class="contact-info" itemscope itemtype="http://schema.org/PostalAddress">
+                    <p itemprop="name"><strong>Centrum Zdraví</strong></p>
+                    <p itemprop="streetAddress">Nemocniční 1</p>
+                    <p><span itemprop="addressLocality">Praha 9</span>, <span itemprop="postalCode">19000</span></p>
+                    <p itemprop="addressCountry">Česká Republika</p>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <h2>📞 Kontaktní informace</h2>
+                <div class="contact-info">
+                    <p><strong>Recepce:</strong> <span itemprop="telephone">+420 123 456 789</span></p>
+                    <p><strong>Nouzová linka:</strong> +420 123 456 790</p>
+                    <p><strong>Email:</strong> info@centrumzdravi.cz</p>
+                    <p><strong>Fax:</strong> +420 123 456 791</p>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <h2>🕒 Ordinační hodiny</h2>
+                <div class="contact-info" itemprop="openingHoursSpecification">
+                    <p><strong>Pondělí - Pátek:</strong> 08:00 - 18:00</p>
+                    <p><strong>Sobota:</strong> 09:00 - 14:00</p>
+                    <p><strong>Neděle:</strong> Zavřeno</p>
+                    <p><strong>Státní svátky:</strong> Zavřeno</p>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <h2>🚗 Parkování</h2>
+                <div class="contact-info">
+                    <p><strong>Vlastní parkoviště:</strong> 20 míst</p>
+                    <p><strong>Parkování zdarma:</strong> Pro pacienty</p>
+                    <p><strong>Doba parkování:</strong> 2 hodiny</p>
+                    <p><strong>Handicap parkování:</strong> 3 místa</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="map-section">
+            <h2>🗺️ Mapa a cesta k nám</h2>
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2558.749411448811!2d14.504161277601462!3d50.10969721183902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470becc8d929c403%3A0xb1990734f48f2d7d!2sNemocni%C4%8Dn%C3%AD%201%2C%20190%2000%20Praha%209!5e0!3m2!1scs!2scz!4v1740347499134!5m2!1scs!2scz"
+                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <p class="map-note">(Ukázková lokalita - mapa ilustrační)</p>
+        </section>
+
+        <section class="transport-section">
+            <h2>🚌 Doprava</h2>
+            <div class="transport-grid">
+                <div class="transport-card">
+                    <h3>🚇 Metro</h3>
+                    <p><strong>Linka B:</strong> Stanice Vysočanská (5 min chůze)</p>
+                    <p><strong>Linka C:</strong> Stanice Prosek (8 min chůze)</p>
+                </div>
+                <div class="transport-card">
+                    <h3>🚌 Autobus</h3>
+                    <p><strong>Linka 151:</strong> Zastávka Nemocniční (přímo před budovou)</p>
+                    <p><strong>Linka 183:</strong> Zastávka Nemocniční (přímo před budovou)</p>
+                </div>
+                <div class="transport-card">
+                    <h3>🚗 Auto</h3>
+                    <p><strong>Z centra:</strong> 15 minut</p>
+                    <p><strong>Z letiště:</strong> 25 minut</p>
+                    <p><strong>Z hlavního nádraží:</strong> 20 minut</p>
+                </div>
+                <div class="transport-card">
+                    <h3>🚲 Kolo</h3>
+                    <p><strong>Cyklostezky:</strong> Dobré napojení</p>
+                    <p><strong>Stojany na kola:</strong> Před budovou</p>
+                    <p><strong>Bezpečné parkování:</strong> Ano</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="emergency-section">
+            <h2>🚨 Nouzové kontakty</h2>
+            <div class="emergency-grid">
+                <div class="emergency-card urgent">
+                    <h3>⚡ Akutní stavy</h3>
+                    <p><strong>Telefon:</strong> +420 123 456 790</p>
+                    <p><strong>Dostupnost:</strong> 24/7</p>
+                    <p><strong>Pro:</strong> Život ohrožující stavy</p>
+                </div>
+                <div class="emergency-card">
+                    <h3>🏥 Nemocnice</h3>
+                    <p><strong>Fakultní nemocnice:</strong> +420 224 961 111</p>
+                    <p><strong>Všeobecná nemocnice:</strong> +420 224 961 111</p>
+                    <p><strong>Dětská nemocnice:</strong> +420 224 961 111</p>
+                </div>
+                <div class="emergency-card">
+                    <h3>🚑 Záchranná služba</h3>
+                    <p><strong>Telefon:</strong> 155</p>
+                    <p><strong>Mobilní:</strong> +420 224 961 111</p>
+                    <p><strong>Pro:</strong> Všechny akutní případy</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-form-section">
+            <h2>📝 Kontaktní formulář</h2>
+            <div class="form-container">
+                <form class="contact-form" action="#" method="post">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Jméno a příjmení *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Telefon</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group select-group">
+                            <label for="subject">Předmět</label>
+                            <select id="subject" name="subject">
+                                <option value="">Vyberte předmět</option>
+                                <option value="appointment">Objednání</option>
+                                <option value="question">Dotaz</option>
+                                <option value="complaint">Stížnost</option>
+                                <option value="other">Jiné</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Zpráva *</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="privacy" required>
+                            Souhlasím se zpracováním osobních údajů *
+                        </label>
+                    </div>
+                    <button type="submit" class="submit-button">Odeslat zprávu</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-columns">
+            <div class="footer-section" itemscope itemtype="http://schema.org/PostalAddress">
+                <h3>Kontakt</h3>
+                <address itemprop="address">
+                    <p itemprop="streetAddress">Nemocniční 1</p>
+                    <p><span itemprop="addressLocality">Praha 9</span>, <span itemprop="postalCode">19000</span></p>
+                    <p itemprop="addressCountry">Česká Republika</p>
+                    <p>Tel: <span itemprop="telephone">+420123456789</span></p>
+                    <p>Email: info@centrumzdravi.cz</p>
+                </address>
+            </div>
+
+            <div class="footer-section">
+                <h3>Služby</h3>
+                <ul id="footerServices" class="footer-services">
+                    <li><a href="services.html#obecnaProhlidka">Obecná prohlídka</a></li>
+                    <li><a href="services.html#detskaPece">Dětská péče</a></li>
+                    <li><a href="services.html#zubniOrdinace">Zubní ordinace</a></li>
+                    <li><a href="services.html#dermatologie">Dermatologie</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Sledujte nás</h3>
+                <ul id="footerSocial" class="social-links">
+                    <li>
+                        <a href="https://threads.com/centrumzdravi" target="_blank">
+                            <img src="assets/threads.png" alt="threads" width="20">
+                            Threads
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/centrumzdravi" target="_blank">
+                            <img src="assets/twitter.png" alt="twitter" width="20">
+                            Twitter
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com/centrumzdravi" target="_blank">
+                            <img src="assets/instagram.png" alt="instagram" width="20">
+                            Instagram
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://facebook.com/centrumzdravi" target="_blank">
+                            <img src="assets/facebook.png" alt="facebook" width="20">
+                            Facebook
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Otevírací doba</h3>
+                <div id="footerOpeningHours" itemprop="openingHoursSpecification">
+                    <p><strong>Pondělí-Pátek:</strong> 08:00 - 18:00</p>
+                    <p><strong>Sobota:</strong> 09:00 - 14:00</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="legal-info">
+            <div class="student-project-notice">
+                <p><strong>🎓 Studentský projekt</strong> - Tento web byl vytvořen jako součást školního projektu</p>
+            </div>
+            <p>&copy; 2025 Centrum Zdraví. Všechna práva vyhrazena.</p>
+            <div class="authors">
+                <p><strong>Autoři:</strong> Jan Novák, Eva Svobodová, Petr Horák</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezervace - Centrum Zdraví</title>
+    <meta name="description" content="Rezervujte si termín u lékaře v Centru Zdraví.">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body itemscope itemtype="http://schema.org/MedicalOrganization">
+    <header>
+        <div>
+            <img src="./Assets/health.png" alt="Logo" itemprop="logo">
+        </div>
+        <div>
+            <h1 itemprop="name">Centrum Zdraví</h1>
+            <p itemprop="description">Poskytujeme moderní zdravotní péči s důrazem na lidský přístup a inovace.</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <ul class="main-nav">
+                <li><a href="index.html">Domů</a></li>
+                <li><a href="services.html">Služby</a></li>
+                <li><a href="doctors.html">Lékaři</a></li>
+                <li><a href="departments.html">Oddělení</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+            <div class="search-container">
+                <form action="search.html" method="get" class="search-form">
+                    <input type="text" name="q" placeholder="Vyhledat lékaře, služby..." class="search-input">
+                    <button type="submit" class="search-button">🔍</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="breadcrumb">
+            <a href="index.html">Domů</a> > <span>Rezervace</span>
+        </div>
+        <section>
+            <h1>Rezervace termínu</h1>
+            <p>Vyplněte formulář níže pro rezervaci termínu u našeho lékaře. Po odeslání vás budeme kontaktovat pro potvrzení termínu.</p>
+        </section>
+
+        <section class="booking-form-section">
+            <div class="booking-steps">
+                <div class="step active">
+                    <span class="step-number">1</span>
+                    <span class="step-title">Výběr služby</span>
+                </div>
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <span class="step-title">Osobní údaje</span>
+                </div>
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <span class="step-title">Potvrzení</span>
+                </div>
+            </div>
+
+            <form class="booking-form" action="#" method="post">
+                <div class="form-section">
+                    <h2>1. Výběr služby a lékaře</h2>
+                    <div class="form-row">
+                        <div class="form-group select-group">
+                            <label for="service">Typ služby *</label>
+                            <select id="service" name="service" required>
+                                <option value="">Vyberte službu</option>
+                                <option value="obecna-prohlidka">Obecná prohlídka</option>
+                                <option value="detska-pece">Dětská péče</option>
+                                <option value="zubni-ordinace">Zubní ordinace</option>
+                                <option value="dermatologie">Dermatologie</option>
+                                <option value="fyzioterapie">Fyzioterapie</option>
+                                <option value="kardiologie">Kardiologie</option>
+                            </select>
+                        </div>
+                        <div class="form-group select-group">
+                            <label for="doctor">Lékař (volitelné)</label>
+                            <select id="doctor" name="doctor">
+                                <option value="">Jakýkoli dostupný lékař</option>
+                                <option value="jan-novak">MUDr. Jan Novák</option>
+                                <option value="eva-svobodova">MUDr. Eva Svobodová</option>
+                                <option value="petr-horak">MDDr. Petr Horák</option>
+                                <option value="anna-cerna">MUDr. Anna Černá</option>
+                                <option value="tomas-kratochvil">Bc. Tomáš Kratochvíl</option>
+                                <option value="pavel-dvorak">MUDr. Pavel Dvořák</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="preferred-date">Preferovaný datum *</label>
+                            <input type="date" id="preferred-date" name="preferred-date" required>
+                        </div>
+                        <div class="form-group select-group">
+                            <label for="preferred-time">Preferovaný čas</label>
+                            <select id="preferred-time" name="preferred-time">
+                                <option value="">Bez preference</option>
+                                <option value="morning">Ráno (8:00-12:00)</option>
+                                <option value="afternoon">Odpoledne (12:00-16:00)</option>
+                                <option value="evening">Večer (16:00-18:00)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h2>2. Osobní údaje</h2>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="first-name">Jméno *</label>
+                            <input type="text" id="first-name" name="first-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name">Příjmení *</label>
+                            <input type="text" id="last-name" name="last-name" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="birth-date">Datum narození *</label>
+                            <input type="date" id="birth-date" name="birth-date" required>
+                        </div>
+                        <div class="form-group select-group">
+                            <label for="gender">Pohlaví</label>
+                            <select id="gender" name="gender">
+                                <option value="">Vyberte pohlaví</option>
+                                <option value="male">Muž</option>
+                                <option value="female">Žena</option>
+                                <option value="other">Jiné</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Telefon *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Adresa</label>
+                        <textarea id="address" name="address" rows="3"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h2>3. Další informace</h2>
+                    <div class="form-group select-group">
+                        <label for="insurance">Pojišťovna</label>
+                        <select id="insurance" name="insurance">
+                            <option value="">Vyberte pojišťovnu</option>
+                            <option value="vzp">VZP</option>
+                            <option value="ozp">OZP</option>
+                            <option value="zp">ZP</option>
+                            <option value="allianz">Allianz</option>
+                            <option value="other">Jiná</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="reason">Důvod návštěvy</label>
+                        <textarea id="reason" name="reason" rows="4" placeholder="Popište stručně důvod vaší návštěvy..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="notes">Poznámky</label>
+                        <textarea id="notes" name="notes" rows="3" placeholder="Jakékoli další informace..."></textarea>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h2>4. Souhlas a potvrzení</h2>
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="privacy" required>
+                            Souhlasím se zpracováním osobních údajů podle GDPR *
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="terms" required>
+                            Souhlasím s podmínkami poskytování zdravotních služeb *
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="newsletter">
+                            Chci dostávat informace o novinkách a službách
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn-secondary" onclick="history.back()">Zpět</button>
+                    <button type="submit" class="btn-primary">Odeslat rezervaci</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="booking-info">
+            <h2>Informace o rezervaci</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>⏰ Potvrzení termínu</h3>
+                    <p>Po odeslání rezervace vás budeme kontaktovat do 24 hodin pro potvrzení termínu.</p>
+                </div>
+                <div class="info-card">
+                    <h3>📞 Kontakt</h3>
+                    <p>Pro urgentní případy volejte přímo na recepci: <strong>+420 123 456 789</strong></p>
+                </div>
+                <div class="info-card">
+                    <h3>🚫 Storno</h3>
+                    <p>Rezervaci můžete zrušit nejpozději 24 hodin před termínem.</p>
+                </div>
+                <div class="info-card">
+                    <h3>💳 Platba</h3>
+                    <p>Platbu můžete provést hotově, kartou nebo přes pojišťovnu.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-columns">
+            <div class="footer-section" itemscope itemtype="http://schema.org/PostalAddress">
+                <h3>Kontakt</h3>
+                <address itemprop="address">
+                    <p itemprop="streetAddress">Nemocniční 1</p>
+                    <p><span itemprop="addressLocality">Praha 9</span>, <span itemprop="postalCode">19000</span></p>
+                    <p itemprop="addressCountry">Česká Republika</p>
+                    <p>Tel: <span itemprop="telephone">+420123456789</span></p>
+                    <p>Email: info@centrumzdravi.cz</p>
+                </address>
+            </div>
+
+            <div class="footer-section">
+                <h3>Služby</h3>
+                <ul id="footerServices" class="footer-services">
+                    <li><a href="services.html#obecnaProhlidka">Obecná prohlídka</a></li>
+                    <li><a href="services.html#detskaPece">Dětská péče</a></li>
+                    <li><a href="services.html#zubniOrdinace">Zubní ordinace</a></li>
+                    <li><a href="services.html#dermatologie">Dermatologie</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Sledujte nás</h3>
+                <ul id="footerSocial" class="social-links">
+                    <li>
+                        <a href="https://threads.com/centrumzdravi" target="_blank">
+                            <img src="assets/threads.png" alt="threads" width="20">
+                            Threads
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/centrumzdravi" target="_blank">
+                            <img src="assets/twitter.png" alt="twitter" width="20">
+                            Twitter
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com/centrumzdravi" target="_blank">
+                            <img src="assets/instagram.png" alt="instagram" width="20">
+                            Instagram
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://facebook.com/centrumzdravi" target="_blank">
+                            <img src="assets/facebook.png" alt="facebook" width="20">
+                            Facebook
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Otevírací doba</h3>
+                <div id="footerOpeningHours" itemprop="openingHoursSpecification">
+                    <p><strong>Pondělí-Pátek:</strong> 08:00 - 18:00</p>
+                    <p><strong>Sobota:</strong> 09:00 - 14:00</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="legal-info">
+            <div class="student-project-notice">
+                <p><strong>🎓 Studentský projekt</strong> - Tento web byl vytvořen jako součást školního projektu</p>
+            </div>
+            <p>&copy; 2025 Centrum Zdraví. Všechna práva vyhrazena.</p>
+            <div class="authors">
+                <p><strong>Autoři:</strong> Jan Novák, Eva Svobodová, Petr Horák</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

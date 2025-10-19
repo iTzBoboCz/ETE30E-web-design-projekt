@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lékaři - Centrum Zdraví</title>
+    <meta name="description" content="Seznam lékařů a odborníků Centra Zdraví.">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body itemscope itemtype="http://schema.org/MedicalOrganization">
+    <header>
+        <div>
+            <img src="./Assets/health.png" alt="Logo" itemprop="logo">
+        </div>
+        <div>
+            <h1 itemprop="name">Centrum Zdraví</h1>
+            <p itemprop="description">Poskytujeme moderní zdravotní péči s důrazem na lidský přístup a inovace.</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <ul class="main-nav">
+                <li><a href="index.html">Domů</a></li>
+                <li><a href="services.html">Služby</a></li>
+                <li><a href="doctors.html" class="active">Lékaři</a></li>
+                <li><a href="departments.html">Oddělení</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+            <div class="search-container">
+                <form action="search.html" method="get" class="search-form">
+                    <input type="text" name="q" placeholder="Vyhledat lékaře, služby..." class="search-input">
+                    <button type="submit" class="search-button">🔍</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="breadcrumb">
+            <a href="index.html">Domů</a> > <span>Lékaři</span>
+        </div>
+        <section>
+            <div class="section-header">
+                <h1>Naši lékaři</h1>
+                <a href="booking.html" class="booking-button">Rezervovat návštěvu</a>
+            </div>
+            <p>Naši lékaři jsou vysoce kvalifikovaní odborníci s dlouholetými zkušenostmi. Všichni pravidelně absolvují další vzdělávání a sledují nejnovější trendy v medicíně.</p>
+        </section>
+
+        <section class="doctors-grid">
+            <div class="doctor-card">
+                <div class="doctor-photo">
+                    <div class="photo-placeholder">👨‍⚕️</div>
+                </div>
+                <div class="doctor-info">
+                    <h3>MUDr. Jan Novák</h3>
+                    <p class="specialty">Všeobecná medicína</p>
+                    <p class="experience">15 let praxe</p>
+                    <div class="languages">
+                        <span class="language-tag">Čeština</span>
+                        <span class="language-tag">Angličtina</span>
+                    </div>
+                    <p class="description">Specializuje se na preventivní medicínu a léčbu chronických onemocnění. Věnuje se také sportovní medicíně.</p>
+                    <div class="doctor-actions">
+                        <a href="doctor-detail.html?id=jan-novak" class="btn-secondary">Profil lékaře</a>
+                        <a href="booking.html?doctor=jan-novak" class="btn-primary">Rezervovat</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="doctor-card">
+                <div class="doctor-photo">
+                    <div class="photo-placeholder">👩‍⚕️</div>
+                </div>
+                <div class="doctor-info">
+                    <h3>MUDr. Eva Svobodová</h3>
+                    <p class="specialty">Pediatrie</p>
+                    <p class="experience">12 let praxe</p>
+                    <div class="languages">
+                        <span class="language-tag">Čeština</span>
+                        <span class="language-tag">Němčina</span>
+                    </div>
+                    <p class="description">Odbornice na dětskou medicínu s důrazem na preventivní péči a očkování. Má zkušenosti s léčbou alergií u dětí.</p>
+                    <div class="doctor-actions">
+                        <a href="doctor-detail.html?id=eva-svobodova" class="btn-secondary">Profil lékaře</a>
+                        <a href="booking.html?doctor=eva-svobodova" class="btn-primary">Rezervovat</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="doctor-card">
+                <div class="doctor-photo">
+                    <div class="photo-placeholder">👨‍⚕️</div>
+                </div>
+                <div class="doctor-info">
+                    <h3>MDDr. Petr Horák</h3>
+                    <p class="specialty">Stomatologie</p>
+                    <p class="experience">18 let praxe</p>
+                    <div class="languages">
+                        <span class="language-tag">Čeština</span>
+                        <span class="language-tag">Španělština</span>
+                    </div>
+                    <p class="description">Specialista na estetickou stomatologii a implantologii. Věnuje se také léčbě paradentózy.</p>
+                    <div class="doctor-actions">
+                        <a href="doctor-detail.html?id=petr-horak" class="btn-secondary">Profil lékaře</a>
+                        <a href="booking.html?doctor=petr-horak" class="btn-primary">Rezervovat</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="doctor-card">
+                <div class="doctor-photo">
+                    <div class="photo-placeholder">👩‍⚕️</div>
+                </div>
+                <div class="doctor-info">
+                    <h3>MUDr. Anna Černá</h3>
+                    <p class="specialty">Dermatologie</p>
+                    <p class="experience">10 let praxe</p>
+                    <div class="languages">
+                        <span class="language-tag">Čeština</span>
+                        <span class="language-tag">Angličtina</span>
+                        <span class="language-tag">Francouzština</span>
+                    </div>
+                    <p class="description">Odbornice na léčbu kožních onemocnění, estetickou dermatologii a laserové ošetření.</p>
+                    <div class="doctor-actions">
+                        <a href="doctor-detail.html?id=anna-cerna" class="btn-secondary">Profil lékaře</a>
+                        <a href="booking.html?doctor=anna-cerna" class="btn-primary">Rezervovat</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="doctor-card">
+                <div class="doctor-photo">
+                    <div class="photo-placeholder">👨‍⚕️</div>
+                </div>
+                <div class="doctor-info">
+                    <h3>Bc. Tomáš Kratochvíl</h3>
+                    <p class="specialty">Fyzioterapie</p>
+                    <p class="experience">8 let praxe</p>
+                    <div class="languages">
+                        <span class="language-tag">Čeština</span>
+                        <span class="language-tag">Angličtina</span>
+                    </div>
+                    <p class="description">Specialista na rehabilitaci pohybového aparátu, sportovní fyzioterapii a manuální terapii.</p>
+                    <div class="doctor-actions">
+                        <a href="doctor-detail.html?id=tomas-kratochvil" class="btn-secondary">Profil lékaře</a>
+                        <a href="booking.html?doctor=tomas-kratochvil" class="btn-primary">Rezervovat</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="doctor-card">
+                <div class="doctor-photo">
+                    <div class="photo-placeholder">👨‍⚕️</div>
+                </div>
+                <div class="doctor-info">
+                    <h3>MUDr. Pavel Dvořák</h3>
+                    <p class="specialty">Kardiologie</p>
+                    <p class="experience">20 let praxe</p>
+                    <div class="languages">
+                        <span class="language-tag">Čeština</span>
+                        <span class="language-tag">Angličtina</span>
+                    </div>
+                    <p class="description">Kardiolog s rozsáhlými zkušenostmi v diagnostice a léčbě srdečních onemocnění. Specializuje se na preventivní kardiologii.</p>
+                    <div class="doctor-actions">
+                        <a href="doctor-detail.html?id=pavel-dvorak" class="btn-secondary">Profil lékaře</a>
+                        <a href="booking.html?doctor=pavel-dvorak" class="btn-primary">Rezervovat</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-section">
+            <h2>Kvalifikace a certifikace</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>🎓 Vzdělání</h3>
+                    <p>Všichni naši lékaři absolvovali prestižní lékařské fakulty a pravidelně se vzdělávají v nejnovějších lékařských postupech.</p>
+                </div>
+                <div class="info-card">
+                    <h3>🏆 Certifikace</h3>
+                    <p>Držíme certifikace ISO 9001, akreditace Ministerstva zdravotnictví a členství v odborných společnostech.</p>
+                </div>
+                <div class="info-card">
+                    <h3>📚 Další vzdělávání</h3>
+                    <p>Každý lékař absolvuje minimálně 50 hodin dalšího vzdělávání ročně a účastní se mezinárodních konferencí.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-columns">
+            <div class="footer-section" itemscope itemtype="http://schema.org/PostalAddress">
+                <h3>Kontakt</h3>
+                <address itemprop="address">
+                    <p itemprop="streetAddress">Nemocniční 1</p>
+                    <p><span itemprop="addressLocality">Praha 9</span>, <span itemprop="postalCode">19000</span></p>
+                    <p itemprop="addressCountry">Česká Republika</p>
+                    <p>Tel: <span itemprop="telephone">+420123456789</span></p>
+                    <p>Email: info@centrumzdravi.cz</p>
+                </address>
+            </div>
+
+            <div class="footer-section">
+                <h3>Služby</h3>
+                <ul id="footerServices" class="footer-services">
+                    <li><a href="services.html#obecnaProhlidka">Obecná prohlídka</a></li>
+                    <li><a href="services.html#detskaPece">Dětská péče</a></li>
+                    <li><a href="services.html#zubniOrdinace">Zubní ordinace</a></li>
+                    <li><a href="services.html#dermatologie">Dermatologie</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Sledujte nás</h3>
+                <ul id="footerSocial" class="social-links">
+                    <li>
+                        <a href="https://threads.com/centrumzdravi" target="_blank">
+                            <img src="assets/threads.png" alt="threads" width="20">
+                            Threads
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/centrumzdravi" target="_blank">
+                            <img src="assets/twitter.png" alt="twitter" width="20">
+                            Twitter
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com/centrumzdravi" target="_blank">
+                            <img src="assets/instagram.png" alt="instagram" width="20">
+                            Instagram
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://facebook.com/centrumzdravi" target="_blank">
+                            <img src="assets/facebook.png" alt="facebook" width="20">
+                            Facebook
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Otevírací doba</h3>
+                <div id="footerOpeningHours" itemprop="openingHoursSpecification">
+                    <p><strong>Pondělí-Pátek:</strong> 08:00 - 18:00</p>
+                    <p><strong>Sobota:</strong> 09:00 - 14:00</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="legal-info">
+            <div class="student-project-notice">
+                <p><strong>🎓 Studentský projekt</strong> - Tento web byl vytvořen jako součást školního projektu</p>
+            </div>
+            <p>&copy; 2025 Centrum Zdraví. Všechna práva vyhrazena.</p>
+            <div class="authors">
+                <p><strong>Autoři:</strong> Jan Novák, Eva Svobodová, Petr Horák</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
