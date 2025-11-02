@@ -3,7 +3,7 @@
             xsi:noNamespaceSchemaLocation="schema.xsd"
             lang="cs">
   <institution id="ins001">
-    <name>Centrum Zdraví</name>
+    <name>Poliklinika Zdraví</name>
     <address>
       <street>Nemocniční 1</street>
       <city>Praha 9</city>
@@ -15,10 +15,10 @@
       <weekend from="09:00:00" to="14:00:00">Sobota</weekend>
     </openingHours>
     <social>
-      <facebook url="https://facebook.com/centrumzdravi"/>
-      <twitter url="https://twitter.com/centrumzdravi"/>
-      <instagram url="https://instagram.com/centrumzdravi"/>
-      <threads url="https://threads.com/centrumzdravi" />
+      <facebook url="https://facebook.com/poliklinikazdravi"/>
+      <twitter url="https://twitter.com/poliklinikazdravi"/>
+      <instagram url="https://instagram.com/poliklinikazdravi"/>
+      <threads url="https://threads.com/poliklinikazdravi" />
     </social>
     <services>
       <!-- Existing Service -->
@@ -86,7 +86,7 @@
     <news>
       <article id="art001" importance="important">
         <title>Nová služba v centru</title>
-        <content>Centrum Zdraví rozšiřuje své služby o fyzioterapii.</content>
+        <content>Poliklinika Zdraví rozšiřuje své služby o fyzioterapii.</content>
         <date>2025-02-10</date>
       </article>
 

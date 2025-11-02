@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontakt - Centrum Zdraví</title>
+    <title>Kontakt - Poliklinika Zdraví</title>
     <meta name="description" content="Kontaktní informace, adresa a cesta k Centru Zdraví.">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body itemscope itemtype="http://schema.org/MedicalOrganization">
@@ -15,21 +16,34 @@
             <img src="./Assets/health.png" alt="Logo" itemprop="logo">
         </div>
         <div>
-            <h1 itemprop="name">Centrum Zdraví</h1>
+            <h1 itemprop="name">Poliklinika Zdraví</h1>
             <p itemprop="description">Poskytujeme moderní zdravotní péči s důrazem na lidský přístup a inovace.</p>
         </div>
     </header>
 
     <nav>
         <div class="nav-container">
-            <ul class="main-nav">
+            <div class="nav-top-mobile">
+                <button class="burger-menu" id="burgerMenu" aria-label="Otevřít menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="search-container mobile-search">
+                    <form action="search.html" method="get" class="search-form">
+                        <input type="text" name="q" placeholder="Vyhledat lékaře, služby..." class="search-input">
+                        <button type="submit" class="search-button">🔍</button>
+                    </form>
+                </div>
+            </div>
+            <ul class="main-nav" id="mainNav">
                 <li><a href="index.html">Domů</a></li>
                 <li><a href="services.html">Služby</a></li>
                 <li><a href="doctors.html">Lékaři</a></li>
                 <li><a href="departments.html">Oddělení</a></li>
                 <li><a href="contact.html" class="active">Kontakt</a></li>
             </ul>
-            <div class="search-container">
+            <div class="search-container desktop-search">
                 <form action="search.html" method="get" class="search-form">
                     <input type="text" name="q" placeholder="Vyhledat lékaře, služby..." class="search-input">
                     <button type="submit" class="search-button">🔍</button>
@@ -44,14 +58,14 @@
         </div>
         <section>
             <h1>Kontakt a cesta k nám</h1>
-            <p>Centrum Zdraví se nachází v centru Prahy s výbornou dostupností veřejnou dopravou i autem. Jsme vám k dispozici pro jakékoli dotazy nebo objednání.</p>
+            <p>Poliklinika Zdraví se nachází v centru Prahy s výbornou dostupností veřejnou dopravou i autem. Jsme vám k dispozici pro jakékoli dotazy nebo objednání.</p>
         </section>
 
         <section class="contact-grid">
             <div class="contact-card">
                 <h2>📍 Adresa</h2>
                 <div class="contact-info" itemscope itemtype="http://schema.org/PostalAddress">
-                    <p itemprop="name"><strong>Centrum Zdraví</strong></p>
+                    <p itemprop="name"><strong>Poliklinika Zdraví</strong></p>
                     <p itemprop="streetAddress">Nemocniční 1</p>
                     <p><span itemprop="addressLocality">Praha 9</span>, <span itemprop="postalCode">19000</span></p>
                     <p itemprop="addressCountry">Česká Republika</p>
@@ -63,7 +77,7 @@
                 <div class="contact-info">
                     <p><strong>Recepce:</strong> <span itemprop="telephone">+420 123 456 789</span></p>
                     <p><strong>Nouzová linka:</strong> +420 123 456 790</p>
-                    <p><strong>Email:</strong> info@centrumzdravi.cz</p>
+                    <p><strong>Email:</strong> info@poliklinikazdravi.cz</p>
                     <p><strong>Fax:</strong> +420 123 456 791</p>
                 </div>
             </div>
@@ -207,7 +221,7 @@
                     <p><span itemprop="addressLocality">Praha 9</span>, <span itemprop="postalCode">19000</span></p>
                     <p itemprop="addressCountry">Česká Republika</p>
                     <p>Tel: <span itemprop="telephone">+420123456789</span></p>
-                    <p>Email: info@centrumzdravi.cz</p>
+                    <p>Email: info@poliklinikazdravi.cz</p>
                 </address>
             </div>
 
@@ -225,25 +239,25 @@
                 <h3>Sledujte nás</h3>
                 <ul id="footerSocial" class="social-links">
                     <li>
-                        <a href="https://threads.com/centrumzdravi" target="_blank">
+                        <a href="https://threads.com/poliklinikazdravi" target="_blank">
                             <img src="assets/threads.png" alt="threads" width="20">
                             Threads
                         </a>
                     </li>
                     <li>
-                        <a href="https://twitter.com/centrumzdravi" target="_blank">
+                        <a href="https://twitter.com/poliklinikazdravi" target="_blank">
                             <img src="assets/twitter.png" alt="twitter" width="20">
                             Twitter
                         </a>
                     </li>
                     <li>
-                        <a href="https://instagram.com/centrumzdravi" target="_blank">
+                        <a href="https://instagram.com/poliklinikazdravi" target="_blank">
                             <img src="assets/instagram.png" alt="instagram" width="20">
                             Instagram
                         </a>
                     </li>
                     <li>
-                        <a href="https://facebook.com/centrumzdravi" target="_blank">
+                        <a href="https://facebook.com/poliklinikazdravi" target="_blank">
                             <img src="assets/facebook.png" alt="facebook" width="20">
                             Facebook
                         </a>
@@ -264,9 +278,9 @@
             <div class="student-project-notice">
                 <p><strong>🎓 Studentský projekt</strong> - Tento web byl vytvořen jako součást školního projektu</p>
             </div>
-            <p>&copy; 2025 Centrum Zdraví. Všechna práva vyhrazena.</p>
+            <p>&copy; 2025 Poliklinika Zdraví. Všechna práva vyhrazena.</p>
             <div class="authors">
-                <p><strong>Autoři:</strong> Jan Novák, Eva Svobodová, Petr Horák</p>
+                <p><strong>Autoři:</strong> Maksym Kuzma, Marek Ötwös, Ondřej Pešek</p>
             </div>
         </div>
     </footer>

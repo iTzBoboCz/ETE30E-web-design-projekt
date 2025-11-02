@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Všeobecné lékařství - Centrum Zdraví</title>
+    <title>Všeobecné lékařství - Poliklinika Zdraví</title>
     <meta name="description" content="Detailní informace o oddělení všeobecného lékařství v Centru Zdraví.">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body itemscope itemtype="http://schema.org/MedicalOrganization">
@@ -15,27 +16,39 @@
             <img src="./Assets/health.png" alt="Logo" itemprop="logo">
         </div>
         <div>
-            <h1 itemprop="name">Centrum Zdraví</h1>
+            <h1 itemprop="name">Poliklinika Zdraví</h1>
             <p itemprop="description">Poskytujeme moderní zdravotní péči s důrazem na lidský přístup a inovace.</p>
         </div>
     </header>
 
     <nav>
         <div class="nav-container">
-            <ul class="main-nav">
+            <div class="nav-top-mobile">
+                <button class="burger-menu" id="burgerMenu" aria-label="Otevřít menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="search-container mobile-search">
+                    <form action="search.html" method="get" class="search-form">
+                        <input type="text" name="q" placeholder="Vyhledat lékaře, služby..." class="search-input">
+                        <button type="submit" class="search-button">🔍</button>
+                    </form>
+                </div>
+            </div>
+            <ul class="main-nav" id="mainNav">
                 <li><a href="index.html">Domů</a></li>
                 <li><a href="services.html">Služby</a></li>
                 <li><a href="doctors.html">Lékaři</a></li>
                 <li><a href="departments.html">Oddělení</a></li>
                 <li><a href="contact.html">Kontakt</a></li>
             </ul>
-            <div class="search-container">
+            <div class="search-container desktop-search">
                 <form action="search.html" method="get" class="search-form">
                     <input type="text" name="q" placeholder="Vyhledat lékaře, služby..." class="search-input">
                     <button type="submit" class="search-button">🔍</button>
                 </form>
-            </div>
-        </div>
+            </div>        </div>
     </nav>
 
     <main>
@@ -45,7 +58,9 @@
 
         <article class="department-profile">
             <header class="department-header">
-                <div class="department-icon-large">🏥</div>
+                <img src="./Assets/departments/general-medicine.jpg" 
+                     alt="Všeobecné lékařství" 
+                     class="department-icon-large-image">
                 <div class="department-info-header">
                     <h1>Všeobecné lékařství</h1>
                     <p class="department-subtitle">Základní zdravotní péče pro dospělé pacienty, preventivní prohlídky a léčba běžných onemocnění</p>
@@ -81,7 +96,12 @@
                                 <li>Léčba infekčních onemocnění</li>
                                 <li>Konzultace a druhé názory</li>
                             </ul>
-                        </section>
+            <div class="search-container desktop-search">
+                <form action="search.html" method="get" class="search-form">
+                    <input type="text" name="q" placeholder="Vyhledat lékaře, služby..." class="search-input">
+                    <button type="submit" class="search-button">🔍</button>
+                </form>
+            </div>                        </section>
 
                         <section class="equipment-section">
                             <h2>Vybavení a technologie</h2>
@@ -94,7 +114,12 @@
                                         <li>Glukometr pro měření cukru</li>
                                         <li>Cholesterol tester</li>
                                     </ul>
-                                </article>
+            <div class="search-container desktop-search">
+                <form action="search.html" method="get" class="search-form">
+                    <input type="text" name="q" placeholder="Vyhledat lékaře, služby..." class="search-input">
+                    <button type="submit" class="search-button">🔍</button>
+                </form>
+            </div>                                </article>
 
                                 <article class="equipment-card">
                                     <h3>🩺 Diagnostické přístroje</h3>
@@ -105,7 +130,12 @@
                                         <li>Teploměr</li>
                                         <li>Stetoskop</li>
                                     </ul>
-                                </article>
+            <div class="search-container desktop-search">
+                <form action="search.html" method="get" class="search-form">
+                    <input type="text" name="q" placeholder="Vyhledat lékaře, služby..." class="search-input">
+                    <button type="submit" class="search-button">🔍</button>
+                </form>
+            </div>                                </article>
 
                                 <article class="equipment-card">
                                     <h3>💻 Informační technologie</h3>
@@ -115,7 +145,12 @@
                                         <li>Telemedicína</li>
                                         <li>Online objednávání</li>
                                     </ul>
-                                </article>
+            <div class="search-container desktop-search">
+                <form action="search.html" method="get" class="search-form">
+                    <input type="text" name="q" placeholder="Vyhledat lékaře, služby..." class="search-input">
+                    <button type="submit" class="search-button">🔍</button>
+                </form>
+            </div>                                </article>
                             </div>
                         </section>
 
@@ -124,7 +159,7 @@
                             <div class="team-grid">
                                 <article class="team-member">
                                     <div class="member-photo">
-                                        <div class="photo-placeholder">👨‍⚕️</div>
+                                        <img src="Assets/doctors/jan-novak.jpg" alt="MUDr. Jan Novák" class="member-photo-img">
                                     </div>
                                     <div class="member-info">
                                         <h3>MUDr. Jan Novák</h3>
@@ -140,7 +175,7 @@
 
                                 <article class="team-member">
                                     <div class="member-photo">
-                                        <div class="photo-placeholder">👩‍⚕️</div>
+                                        <img src="Assets/doctors/eva-svobodova.jpg" alt="MUDr. Marie Svobodová" class="member-photo-img">
                                     </div>
                                     <div class="member-info">
                                         <h3>MUDr. Marie Svobodová</h3>
@@ -156,7 +191,7 @@
 
                                 <article class="team-member">
                                     <div class="member-photo">
-                                        <div class="photo-placeholder">👨‍⚕️</div>
+                                        <img src="Assets/doctors/pavel-dvorak.jpg" alt="MUDr. Pavel Dvořák" class="member-photo-img">
                                     </div>
                                     <div class="member-info">
                                         <h3>MUDr. Pavel Dvořák</h3>
@@ -210,7 +245,7 @@
                             <h3>Kontakt oddělení</h3>
                             <div class="contact-info">
                                 <p><strong>Telefon:</strong> +420 123 456 789</p>
-                                <p><strong>Email:</strong> vseobecne@centrumzdravi.cz</p>
+                                <p><strong>Email:</strong> vseobecne@poliklinikazdravi.cz</p>
                                 <p><strong>Lokace:</strong> 1. patro, místnosti 101-103</p>
                                 <p><strong>Vedoucí:</strong> MUDr. Jan Novák</p>
                             </div>
@@ -251,8 +286,11 @@
             <h2>Související oddělení</h2>
             <div class="departments-grid">
                 <article class="department-card">
-                    <div class="department-icon">👶</div>
-                    <div class="department-content">
+                    <div class="department-card-header">
+                        <img src="./Assets/departments/pediatrics.jpg" 
+                             alt="Pediatrie" 
+                             class="department-icon-image">
+                        <div class="department-content">
                         <h3>Pediatrie</h3>
                         <p class="department-description">Komplexní zdravotní péče pro děti od narození do 18 let věku.</p>
                         <div class="department-details">
@@ -264,11 +302,15 @@
                             <a href="booking.html?department=pediatrie" class="btn-primary">Rezervovat</a>
                         </div>
                     </div>
+                    </div>
                 </article>
 
                 <article class="department-card">
-                    <div class="department-icon">🦷</div>
-                    <div class="department-content">
+                    <div class="department-card-header">
+                        <img src="./Assets/departments/dentistry.jpg" 
+                             alt="Stomatologie" 
+                             class="department-icon-image">
+                        <div class="department-content">
                         <h3>Stomatologie</h3>
                         <p class="department-description">Kompletní zubní péče včetně preventivních prohlídek a estetické stomatologie.</p>
                         <div class="department-details">
@@ -279,6 +321,7 @@
                             <a href="department-detail.html?id=stomatologie" class="btn-secondary">Více informací</a>
                             <a href="booking.html?department=stomatologie" class="btn-primary">Rezervovat</a>
                         </div>
+                    </div>
                     </div>
                 </article>
             </div>
@@ -294,7 +337,7 @@
                     <p><span itemprop="addressLocality">Praha 9</span>, <span itemprop="postalCode">19000</span></p>
                     <p itemprop="addressCountry">Česká Republika</p>
                     <p>Tel: <span itemprop="telephone">+420123456789</span></p>
-                    <p>Email: info@centrumzdravi.cz</p>
+                    <p>Email: info@poliklinikazdravi.cz</p>
                 </address>
             </div>
 
@@ -306,37 +349,47 @@
                     <li><a href="services.html#zubniOrdinace">Zubní ordinace</a></li>
                     <li><a href="services.html#dermatologie">Dermatologie</a></li>
                 </ul>
-            </div>
+            <div class="search-container desktop-search">
+                <form action="search.html" method="get" class="search-form">
+                    <input type="text" name="q" placeholder="Vyhledat lékaře, služby..." class="search-input">
+                    <button type="submit" class="search-button">🔍</button>
+                </form>
+            </div>            </div>
 
             <div class="footer-section">
                 <h3>Sledujte nás</h3>
                 <ul id="footerSocial" class="social-links">
                     <li>
-                        <a href="https://threads.com/centrumzdravi" target="_blank">
+                        <a href="https://threads.com/poliklinikazdravi" target="_blank">
                             <img src="assets/threads.png" alt="threads" width="20">
                             Threads
                         </a>
                     </li>
                     <li>
-                        <a href="https://twitter.com/centrumzdravi" target="_blank">
+                        <a href="https://twitter.com/poliklinikazdravi" target="_blank">
                             <img src="assets/twitter.png" alt="twitter" width="20">
                             Twitter
                         </a>
                     </li>
                     <li>
-                        <a href="https://instagram.com/centrumzdravi" target="_blank">
+                        <a href="https://instagram.com/poliklinikazdravi" target="_blank">
                             <img src="assets/instagram.png" alt="instagram" width="20">
                             Instagram
                         </a>
                     </li>
                     <li>
-                        <a href="https://facebook.com/centrumzdravi" target="_blank">
+                        <a href="https://facebook.com/poliklinikazdravi" target="_blank">
                             <img src="assets/facebook.png" alt="facebook" width="20">
                             Facebook
                         </a>
                     </li>
                 </ul>
-            </div>
+            <div class="search-container desktop-search">
+                <form action="search.html" method="get" class="search-form">
+                    <input type="text" name="q" placeholder="Vyhledat lékaře, služby..." class="search-input">
+                    <button type="submit" class="search-button">🔍</button>
+                </form>
+            </div>            </div>
 
             <div class="footer-section">
                 <h3>Otevírací doba</h3>
@@ -351,9 +404,9 @@
             <div class="student-project-notice">
                 <p><strong>🎓 Studentský projekt</strong> - Tento web byl vytvořen jako součást školního projektu</p>
             </div>
-            <p>&copy; 2025 Centrum Zdraví. Všechna práva vyhrazena.</p>
+            <p>&copy; 2025 Poliklinika Zdraví. Všechna práva vyhrazena.</p>
             <div class="authors">
-                <p><strong>Autoři:</strong> Jan Novák, Eva Svobodová, Petr Horák</p>
+                <p><strong>Autoři:</strong> Maksym Kuzma, Marek Ötwös, Ondřej Pešek</p>
             </div>
         </div>
     </footer>

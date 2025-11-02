@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MUDr. Jan Novák - Centrum Zdraví</title>
+    <title>MUDr. Jan Novák - Poliklinika Zdraví</title>
     <meta name="description" content="Profil lékaře MUDr. Jana Nováka - specialisty na všeobecnou medicínu v Centru Zdraví.">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body itemscope itemtype="http://schema.org/MedicalOrganization">
@@ -15,27 +16,39 @@
             <img src="./Assets/health.png" alt="Logo" itemprop="logo">
         </div>
         <div>
-            <h1 itemprop="name">Centrum Zdraví</h1>
+            <h1 itemprop="name">Poliklinika Zdraví</h1>
             <p itemprop="description">Poskytujeme moderní zdravotní péči s důrazem na lidský přístup a inovace.</p>
         </div>
     </header>
 
     <nav>
         <div class="nav-container">
-            <ul class="main-nav">
+            <div class="nav-top-mobile">
+                <button class="burger-menu" id="burgerMenu" aria-label="Otevřít menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="search-container mobile-search">
+                    <form action="search.html" method="get" class="search-form">
+                        <input type="text" name="q" placeholder="Vyhledat lékaře, služby..." class="search-input">
+                        <button type="submit" class="search-button">🔍</button>
+                    </form>
+                </div>
+            </div>
+            <ul class="main-nav" id="mainNav">
                 <li><a href="index.html">Domů</a></li>
                 <li><a href="services.html">Služby</a></li>
                 <li><a href="doctors.html">Lékaři</a></li>
                 <li><a href="departments.html">Oddělení</a></li>
                 <li><a href="contact.html">Kontakt</a></li>
             </ul>
-            <div class="search-container">
+            <div class="search-container desktop-search">
                 <form action="search.html" method="get" class="search-form">
                     <input type="text" name="q" placeholder="Vyhledat lékaře, služby..." class="search-input">
                     <button type="submit" class="search-button">🔍</button>
                 </form>
-            </div>
-        </div>
+            </div>        </div>
     </nav>
 
     <main>
@@ -46,7 +59,7 @@
         <article class="doctor-profile">
             <header class="doctor-header">
                 <div class="doctor-photo-large">
-                    <div class="photo-placeholder-large">👨‍⚕️</div>
+                    <img src="Assets/doctors/jan-novak.jpg" alt="MUDr. Jan Novák" class="doctor-photo-img-large">
                 </div>
                 <div class="doctor-info-header">
                     <h1>MUDr. Jan Novák</h1>
@@ -80,7 +93,12 @@
                                 <li>Léčba akutních stavů</li>
                                 <li>Očkování a cestovní medicína</li>
                             </ul>
-                        </section>
+            <div class="search-container desktop-search">
+                <form action="search.html" method="get" class="search-form">
+                    <input type="text" name="q" placeholder="Vyhledat lékaře, služby..." class="search-input">
+                    <button type="submit" class="search-button">🔍</button>
+                </form>
+            </div>                        </section>
 
                         <section class="education-section">
                             <h2>Vzdělání a kvalifikace</h2>
@@ -176,7 +194,7 @@
                             <h3>Kontakt</h3>
                             <div class="contact-info">
                                 <p><strong>Telefon:</strong> +420 123 456 789</p>
-                                <p><strong>Email:</strong> novak@centrumzdravi.cz</p>
+                                <p><strong>Email:</strong> novak@poliklinikazdravi.cz</p>
                                 <p><strong>Ordinace:</strong> 1. patro, místnost 101</p>
                             </div>
                         </section>
@@ -189,7 +207,12 @@
                                 <li>ISO 9001 - Kvalita služeb</li>
                                 <li>BLS - Základní podpora života</li>
                             </ul>
-                        </section>
+            <div class="search-container desktop-search">
+                <form action="search.html" method="get" class="search-form">
+                    <input type="text" name="q" placeholder="Vyhledat lékaře, služby..." class="search-input">
+                    <button type="submit" class="search-button">🔍</button>
+                </form>
+            </div>                        </section>
 
                         <section class="reviews-section">
                             <h3>Hodnocení pacientů</h3>
@@ -212,7 +235,7 @@
             <div class="doctors-grid">
                 <article class="doctor-card">
                     <div class="doctor-photo">
-                        <div class="photo-placeholder">👩‍⚕️</div>
+                        <img src="Assets/doctors/eva-svobodova.jpg" alt="MUDr. Eva Svobodová" class="doctor-photo-img">
                     </div>
                     <div class="doctor-info">
                         <h3>MUDr. Eva Svobodová</h3>
@@ -231,7 +254,7 @@
 
                 <article class="doctor-card">
                     <div class="doctor-photo">
-                        <div class="photo-placeholder">👨‍⚕️</div>
+                        <img src="Assets/doctors/petr-horak.jpg" alt="MDDr. Petr Horák" class="doctor-photo-img">
                     </div>
                     <div class="doctor-info">
                         <h3>MDDr. Petr Horák</h3>
@@ -260,7 +283,7 @@
                     <p><span itemprop="addressLocality">Praha 9</span>, <span itemprop="postalCode">19000</span></p>
                     <p itemprop="addressCountry">Česká Republika</p>
                     <p>Tel: <span itemprop="telephone">+420123456789</span></p>
-                    <p>Email: info@centrumzdravi.cz</p>
+                    <p>Email: info@poliklinikazdravi.cz</p>
                 </address>
             </div>
 
@@ -272,37 +295,47 @@
                     <li><a href="services.html#zubniOrdinace">Zubní ordinace</a></li>
                     <li><a href="services.html#dermatologie">Dermatologie</a></li>
                 </ul>
-            </div>
+            <div class="search-container desktop-search">
+                <form action="search.html" method="get" class="search-form">
+                    <input type="text" name="q" placeholder="Vyhledat lékaře, služby..." class="search-input">
+                    <button type="submit" class="search-button">🔍</button>
+                </form>
+            </div>            </div>
 
             <div class="footer-section">
                 <h3>Sledujte nás</h3>
                 <ul id="footerSocial" class="social-links">
                     <li>
-                        <a href="https://threads.com/centrumzdravi" target="_blank">
+                        <a href="https://threads.com/poliklinikazdravi" target="_blank">
                             <img src="assets/threads.png" alt="threads" width="20">
                             Threads
                         </a>
                     </li>
                     <li>
-                        <a href="https://twitter.com/centrumzdravi" target="_blank">
+                        <a href="https://twitter.com/poliklinikazdravi" target="_blank">
                             <img src="assets/twitter.png" alt="twitter" width="20">
                             Twitter
                         </a>
                     </li>
                     <li>
-                        <a href="https://instagram.com/centrumzdravi" target="_blank">
+                        <a href="https://instagram.com/poliklinikazdravi" target="_blank">
                             <img src="assets/instagram.png" alt="instagram" width="20">
                             Instagram
                         </a>
                     </li>
                     <li>
-                        <a href="https://facebook.com/centrumzdravi" target="_blank">
+                        <a href="https://facebook.com/poliklinikazdravi" target="_blank">
                             <img src="assets/facebook.png" alt="facebook" width="20">
                             Facebook
                         </a>
                     </li>
                 </ul>
-            </div>
+            <div class="search-container desktop-search">
+                <form action="search.html" method="get" class="search-form">
+                    <input type="text" name="q" placeholder="Vyhledat lékaře, služby..." class="search-input">
+                    <button type="submit" class="search-button">🔍</button>
+                </form>
+            </div>            </div>
 
             <div class="footer-section">
                 <h3>Otevírací doba</h3>
@@ -317,9 +350,9 @@
             <div class="student-project-notice">
                 <p><strong>🎓 Studentský projekt</strong> - Tento web byl vytvořen jako součást školního projektu</p>
             </div>
-            <p>&copy; 2025 Centrum Zdraví. Všechna práva vyhrazena.</p>
+            <p>&copy; 2025 Poliklinika Zdraví. Všechna práva vyhrazena.</p>
             <div class="authors">
-                <p><strong>Autoři:</strong> Jan Novák, Eva Svobodová, Petr Horák</p>
+                <p><strong>Autoři:</strong> Maksym Kuzma, Marek Ötwös, Ondřej Pešek</p>
             </div>
         </div>
     </footer>
