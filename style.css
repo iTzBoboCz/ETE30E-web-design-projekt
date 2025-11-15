@@ -131,11 +131,11 @@ nav {
     width: 100%;
 }
 
-a.tel,
-a.tel:visited,
-a.tel:hover,
-a.tel:active,
-a.tel:link {
+a.contact,
+a.contact:visited,
+a.contact:hover,
+a.contact:active,
+a.contact:link {
     text-decoration: none;
     color: initial;
     /* font-weight: bold; */
