@@ -131,6 +131,15 @@ nav {
     width: 100%;
 }
 
+a.tel,
+a.tel:visited,
+a.tel:hover,
+a.tel:active,
+a.tel:link {
+    text-decoration: none;
+    color: initial;
+    /* font-weight: bold; */
+}
 
 /* Burger menu button */
 .burger-menu {
@@ -530,6 +539,10 @@ footer {
     background: #134E4A;
     color: #ECFDF5;
     padding: 30px 20px;
+}
+
+footer address a {
+    color: #ECFDF5 !important;
 }
 
 .footer-columns {
