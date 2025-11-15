@@ -83,6 +83,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    /* font-weight: normal; */
+    /* font-style: normal; */
+    /* font-variation-settings:
+        "wdth" 100; */
 }
 header {
     display: flex;
@@ -124,6 +130,15 @@ nav {
     order: 1;
 }
 
+a.contact,
+a.contact:visited,
+a.contact:hover,
+a.contact:active,
+a.contact:link {
+    text-decoration: none;
+    color: initial;
+    /* font-weight: bold; */
+}
 
 /* Burger menu button */
 .burger-menu {
@@ -531,6 +546,10 @@ footer {
     background: #134E4A;
     color: #ECFDF5;
     padding: 30px 20px;
+}
+
+footer address a {
+    color: #ECFDF5 !important;
 }
 
 .footer-columns {
