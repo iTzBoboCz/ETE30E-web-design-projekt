@@ -109,13 +109,11 @@ nav {
 
 .nav-container {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 15px;
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
-    align-items: center;
 }
 
 .nav-top-mobile {
@@ -123,6 +121,7 @@ nav {
     align-items: center;
     gap: 10px;
     width: 100%;
+    order: 1;
 }
 
 
@@ -298,6 +297,14 @@ section, aside{
     margin: 15px 0;
     object-fit: cover;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.map-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: block;
 }
 
 .map-link {
@@ -2240,10 +2247,10 @@ textarea:focus {
     }
 
     .nav-top-mobile {
-        display: flex;
         width: 100%;
         gap: 10px;
         align-items: center;
+        order: 1;
     }
 
     .burger-menu {
@@ -2256,11 +2263,8 @@ textarea:focus {
         min-width: 0;
     }
 
-    .search-container.desktop-search {
-        display: none;
-    }
-
     .main-nav {
+        order: 2;
         width: 100%;
     }
 }
@@ -2286,16 +2290,18 @@ textarea:focus {
 
     .nav-container {
         flex-direction: row;
-        justify-content: space-between;
         align-items: center;
-    }
-
-    .nav-container {
+        gap: 20px;
         flex-wrap: nowrap;
     }
 
     .nav-top-mobile {
-        display: none;
+        order: 2;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        width: auto;
+        margin-left: auto;
     }
 
     .burger-menu {
@@ -2303,16 +2309,12 @@ textarea:focus {
     }
 
     .search-container.mobile-search {
-        display: none;
-    }
-
-    .search-container.desktop-search {
-        display: flex !important;
         width: auto;
-        order: 0;
+        flex: 0 0 auto;
     }
 
     .main-nav {
+        order: 1;
         flex-direction: row;
         gap: 30px;
         width: auto;
