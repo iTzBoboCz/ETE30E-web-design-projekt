@@ -59,27 +59,12 @@
         </section>
 
         <section class="booking-form-section">
-            <div class="booking-steps">
-                <div class="step active">
-                    <span class="step-number">1</span>
-                    <span class="step-title">Výběr služby</span>
-                </div>
-                <div class="step">
-                    <span class="step-number">2</span>
-                    <span class="step-title">Osobní údaje</span>
-                </div>
-                <div class="step">
-                    <span class="step-number">3</span>
-                    <span class="step-title">Potvrzení</span>
-                </div>
-            </div>
-
             <form class="booking-form" action="#" method="post">
                 <div class="form-section">
                     <h2>1. Výběr služby a lékaře</h2>
                     <div class="form-row">
                         <div class="form-group select-group">
-                            <label for="service">Typ služby *</label>
+                            <label for="service">Typ služby</label>
                             <select id="service" name="service" required>
                                 <option value="">Vyberte službu</option>
                                 <option value="obecna-prohlidka">Obecná prohlídka</option>
@@ -103,19 +88,111 @@
                             </select>
                         </div>
                     </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="preferred-date">Preferovaný datum *</label>
-                            <input type="date" id="preferred-date" name="preferred-date" required>
+                    <div class="form-group">
+                        <label>Preferovaný datum</label>
+                        <input type="hidden" id="preferred-date" name="preferred-date" required>
+                        <div class="date-picker-controls">
+                            <div class="form-row" style="margin-bottom: 10px;">
+                                <div class="form-group select-group" style="margin-bottom: 0;">
+                                    <select id="month" name="month">
+                                        <option value="01">Leden</option>
+                                        <option value="02">Únor</option>
+                                        <option value="03">Březen</option>
+                                        <option value="04">Duben</option>
+                                        <option value="05">Květen</option>
+                                        <option value="06">Červen</option>
+                                        <option value="07">Červenec</option>
+                                        <option value="08">Srpen</option>
+                                        <option value="09">Září</option>
+                                        <option value="10">Říjen</option>
+                                        <option value="11">Listopad</option>
+                                        <option value="12">Prosinec</option>
+                                    </select>
+                                </div>
+                                <div class="form-group select-group" style="margin-bottom: 0;">
+                                    <select id="year" name="year">
+                                        <option value="2025">2025</option>
+                                        <option value="2026">2026</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-group select-group">
-                            <label for="preferred-time">Preferovaný čas</label>
-                            <select id="preferred-time" name="preferred-time">
-                                <option value="">Bez preference</option>
-                                <option value="morning">Ráno (8:00-12:00)</option>
-                                <option value="afternoon">Odpoledne (12:00-16:00)</option>
-                                <option value="evening">Večer (16:00-18:00)</option>
-                            </select>
+                        <div class="date-picker-table">
+                            <table class="date-table">
+                                <thead>
+                                    <tr>
+                                        <th>Po</th>
+                                        <th>Út</th>
+                                        <th>St</th>
+                                        <th>Čt</th>
+                                        <th>Pá</th>
+                                        <th>So</th>
+                                        <th>Ne</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><button type="button" class="date-option" data-date="2025-01-15">15</button></td>
+                                        <td><button type="button" class="date-option" data-date="2025-01-16">16</button></td>
+                                        <td><button type="button" class="date-option disabled" disabled>17</button></td>
+                                        <td><button type="button" class="date-option" data-date="2025-01-18">18</button></td>
+                                        <td><button type="button" class="date-option" data-date="2025-01-19">19</button></td>
+                                        <td><button type="button" class="date-option disabled" disabled>20</button></td>
+                                        <td><button type="button" class="date-option disabled" disabled>21</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><button type="button" class="date-option" data-date="2025-01-22">22</button></td>
+                                        <td><button type="button" class="date-option" data-date="2025-01-23">23</button></td>
+                                        <td><button type="button" class="date-option" data-date="2025-01-24">24</button></td>
+                                        <td><button type="button" class="date-option disabled" disabled>25</button></td>
+                                        <td><button type="button" class="date-option" data-date="2025-01-26">26</button></td>
+                                        <td><button type="button" class="date-option disabled" disabled>27</button></td>
+                                        <td><button type="button" class="date-option disabled" disabled>28</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Preferovaný čas</label>
+                        <input type="hidden" id="preferred-time" name="preferred-time" required>
+                        <div class="time-picker-table">
+                            <table class="time-table">
+                                <tbody>
+                                    <tr>
+                                        <td><button type="button" class="time-option" data-time="08:00">08:00</button></td>
+                                        <td><button type="button" class="time-option" data-time="08:30">08:30</button></td>
+                                        <td><button type="button" class="time-option" data-time="09:00">09:00</button></td>
+                                        <td><button type="button" class="time-option disabled" disabled>09:30</button></td>
+                                        <td><button type="button" class="time-option" data-time="10:00">10:00</button></td>
+                                        <td><button type="button" class="time-option" data-time="10:30">10:30</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><button type="button" class="time-option disabled" disabled>11:00</button></td>
+                                        <td><button type="button" class="time-option" data-time="11:30">11:30</button></td>
+                                        <td><button type="button" class="time-option" data-time="12:00">12:00</button></td>
+                                        <td><button type="button" class="time-option disabled" disabled>12:30</button></td>
+                                        <td><button type="button" class="time-option" data-time="13:00">13:00</button></td>
+                                        <td><button type="button" class="time-option" data-time="13:30">13:30</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><button type="button" class="time-option" data-time="14:00">14:00</button></td>
+                                        <td><button type="button" class="time-option disabled" disabled>14:30</button></td>
+                                        <td><button type="button" class="time-option" data-time="15:00">15:00</button></td>
+                                        <td><button type="button" class="time-option" data-time="15:30">15:30</button></td>
+                                        <td><button type="button" class="time-option" data-time="16:00">16:00</button></td>
+                                        <td><button type="button" class="time-option disabled" disabled>16:30</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><button type="button" class="time-option" data-time="17:00">17:00</button></td>
+                                        <td><button type="button" class="time-option" data-time="17:30">17:30</button></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
@@ -124,17 +201,17 @@
                     <h2>2. Osobní údaje</h2>
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="first-name">Jméno *</label>
+                            <label for="first-name">Jméno</label>
                             <input type="text" id="first-name" name="first-name" required>
                         </div>
                         <div class="form-group">
-                            <label for="last-name">Příjmení *</label>
+                            <label for="last-name">Příjmení</label>
                             <input type="text" id="last-name" name="last-name" required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="birth-date">Datum narození *</label>
+                            <label for="birth-date">Datum narození</label>
                             <input type="date" id="birth-date" name="birth-date" required>
                         </div>
                         <div class="form-group select-group">
@@ -149,11 +226,11 @@
                     </div>
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="phone">Telefon *</label>
+                            <label for="phone">Telefon</label>
                             <input type="tel" id="phone" name="phone" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email *</label>
+                            <label for="email">Email</label>
                             <input type="email" id="email" name="email" required>
                         </div>
                     </div>
@@ -191,13 +268,13 @@
                     <div class="form-group">
                         <label class="checkbox-label">
                             <input type="checkbox" name="privacy" required>
-                            Souhlasím se zpracováním osobních údajů podle GDPR *
+                            Souhlasím se zpracováním osobních údajů podle GDPR
                         </label>
                     </div>
                     <div class="form-group">
                         <label class="checkbox-label">
                             <input type="checkbox" name="terms" required>
-                            Souhlasím s podmínkami poskytování zdravotních služeb *
+                            Souhlasím s podmínkami poskytování zdravotních služeb
                         </label>
                     </div>
                     <div class="form-group">

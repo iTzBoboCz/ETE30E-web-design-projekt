@@ -58,5 +58,39 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 250);
         });
     }
+
+    // Date and time picker functionality
+    const dateButtons = document.querySelectorAll('.date-option:not(.disabled)');
+    const timeButtons = document.querySelectorAll('.time-option:not(.disabled)');
+    const dateInput = document.getElementById('preferred-date');
+    const timeInput = document.getElementById('preferred-time');
+
+    // Handle date selection
+    dateButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove selected class from all date buttons
+            dateButtons.forEach(btn => btn.classList.remove('selected'));
+            // Add selected class to clicked button
+            this.classList.add('selected');
+            // Set hidden input value
+            if (dateInput && this.dataset.date) {
+                dateInput.value = this.dataset.date;
+            }
+        });
+    });
+
+    // Handle time selection
+    timeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove selected class from all time buttons
+            timeButtons.forEach(btn => btn.classList.remove('selected'));
+            // Add selected class to clicked button
+            this.classList.add('selected');
+            // Set hidden input value
+            if (timeInput && this.dataset.time) {
+                timeInput.value = this.dataset.time;
+            }
+        });
+    });
 });
 
