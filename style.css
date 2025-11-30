@@ -6,9 +6,17 @@
     --primary-light: #CCFBF1;
     --secondary-color: #64748B;
     --success-color: #10B981;
+    --success-light: #e8f5e9;
+    --success-dark: #059669;
     --warning-color: #F59E0B;
+    --warning-light: #fff3cd;
+    --warning-border: #ffeaa7;
+    --warning-text: #856404;
     --danger-color: #EF4444;
+    --danger-light: #ffebee;
+    --danger-text: #c62828;
     --info-color: #06B6D4;
+    --info-dark: #0891b2;
     
     /* Neutral colors */
     --white: #ffffff;
@@ -26,6 +34,16 @@
     --bg-primary: #ffffff;
     --bg-secondary: #F0FDFA;
     --bg-dark: #134E4A;
+    
+    /* Footer colors */
+    --footer-text: #ecf0f1;
+    --footer-text-light: #ECFDF5;
+    --footer-accent: #5EEAD4;
+    --footer-border: #2DD4BF;
+    --footer-border-dark: #34495e;
+    
+    /* Border colors */
+    --border-light: #dee2e6;
     
     /* Spacing */
     --spacing-xs: 0.25rem;
@@ -137,7 +155,7 @@ a.contact:active,
 a.contact:link {
     text-decoration: none;
     color: initial;
-    /* font-weight: bold; */
+    /* font-weight: var(--font-weight-bold); */
 }
 
 /* Burger menu button */
@@ -151,15 +169,15 @@ a.contact:link {
     border: none;
     cursor: pointer;
     padding: 0;
-    z-index: 1001;
+    z-index: var(--z-fixed);
 }
 
 .burger-menu span {
     width: 100%;
     height: 3px;
-    background: white;
+    background: var(--bg-primary);
     border-radius: 3px;
-    transition: all 0.3s ease;
+    transition: all var(--transition-normal);
     transform-origin: center;
 }
 
@@ -185,7 +203,7 @@ a.contact:link {
     margin: 0;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease;
+    transition: max-height var(--transition-normal);
 }
 
 .main-nav.active {
@@ -201,7 +219,7 @@ a.contact:link {
     text-decoration: none;
     padding: 15px 20px;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    transition: background-color var(--transition-normal);
     display: block;
     text-align: center;
     width: 100%;
@@ -227,18 +245,18 @@ a.contact:link {
     border-radius: 8px 0 0 8px;
     width: calc(100% - 50px);
     background: rgba(255, 255, 255, 0.9);
-    color: #333;
+    color: var(--text-primary);
     font-size: 14px;
-    transition: all 0.3s ease;
+    transition: all var(--transition-normal);
 }
 .search-input:focus {
     outline: none;
     border-color: rgba(255, 255, 255, 0.8);
-    background: white;
+    background: var(--bg-primary);
     box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2);
 }
 .search-input::placeholder {
-    color: #666;
+    color: var(--text-muted);
 }
 .search-button {
     padding: 10px 15px;
@@ -247,15 +265,15 @@ a.contact:link {
     border: none;
     border-radius: 0 8px 8px 0;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all var(--transition-normal);
     font-size: 16px;
 }
 .search-button:hover {
-    background: linear-gradient(135deg, var(--bg-dark) 0%, #0F766E 100%);
+    background: linear-gradient(135deg, var(--bg-dark) 0%, var(--primary-dark) 100%);
     transform: translateY(-1px);
 }
 .breadcrumb {
-    background: #F0FDFA;
+    background: var(--bg-secondary);
     padding: 10px 15px;
     margin: 0 20px 15px;
     border-radius: 5px;
@@ -276,11 +294,11 @@ main {
 }
 
 section, aside{
-    background: white;
+    background: var(--bg-primary);
     padding: 20px;
     margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
 }
 
 section#news,
@@ -304,7 +322,7 @@ section#about {
     width: 100%;
     max-width: 600px;
     height: auto;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     margin: 20px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     object-fit: cover;
@@ -314,26 +332,26 @@ section#about {
     width: 100%;
     max-width: 400px;
     height: 250px;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     margin: 15px 0;
     object-fit: cover;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow);
 }
 
 .news-image {
     width: 100%;
     max-width: 500px;
     height: 300px;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     margin: 15px 0;
     object-fit: cover;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow);
 }
 
 .map-image {
     width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: block;
 }
@@ -346,8 +364,8 @@ section#about {
     color: white;
     text-decoration: none;
     border-radius: 5px;
-    font-weight: bold;
-    transition: all 0.3s ease;
+    font-weight: var(--font-weight-bold);
+    transition: all var(--transition-normal);
 }
 
 .map-link:hover {
@@ -402,11 +420,11 @@ section#about {
 }
 
 .about-feature-card {
-    background: white;
+    background: var(--bg-primary);
     border-radius: 12px;
     overflow: hidden;
     box-shadow: var(--shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
     display: flex;
     flex-direction: column;
 }
@@ -473,7 +491,7 @@ section#about {
     position: absolute;
     left: 0;
     color: var(--success-color);
-    font-weight: bold;
+    font-weight: var(--font-weight-bold);
     font-size: 1.2em;
 }
 
@@ -491,7 +509,7 @@ section#about {
     text-align: center;
     padding: 20px;
     background: rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     backdrop-filter: blur(10px);
 }
 
@@ -605,12 +623,12 @@ section#about {
 .services-articles {
     padding: 20px;
     margin-bottom: 0;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: var(--bg-primary);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
     display: flex;
     flex-direction: column;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
     text-decoration: none;
     color: inherit;
     cursor: pointer;
@@ -621,22 +639,32 @@ section#about {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
+.services-articles time {
+    display: block;
+    margin-top: auto;
+    padding-top: 10px;
+    font-size: 0.85em;
+    color: var(--primary-color);
+    font-weight: var(--font-weight-semibold);
+    border-top: 1px solid var(--primary-light);
+}
+
 .news-image {
     width: 100%;
     max-width: 100%;
     height: 200px;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     margin: 15px 0;
 }
 footer {
-    background: #134E4A;
-    color: #ECFDF5;
+    background: var(--bg-dark);
+    color: var(--footer-text-light);
     padding: 30px 20px;
 }
 
 footer address a {
-    color: #ECFDF5 !important;
+    color: var(--footer-text-light) !important;
 }
 
 .footer-columns {
@@ -649,28 +677,28 @@ footer address a {
 .footer-section {
     padding: 20px;
     background: rgba(255, 255, 255, 0.05);
-    border-radius: 8px;
+    border-radius: var(--border-radius);
 }
 .footer-section h3 {
-    color: #5EEAD4;
+    color: var(--footer-accent);
     padding-bottom: 10px;
-    border-bottom: 1px solid #2DD4BF;
+    border-bottom: 1px solid var(--footer-border);
 }
 .footer-section li { list-style-type: none; }
 .footer-section ul a {
-    color: #ecf0f1;
+    color: var(--footer-text);
     text-decoration: none;
     display: flex;
     align-items: center;
     gap: 10px;
-    transition: color 0.3s;
+    transition: color var(--transition-normal);
 }
-.footer-section ul a:hover { color: #5EEAD4; }
+.footer-section ul a:hover { color: var(--footer-accent); }
 .legal-info {
     text-align: center;
     padding-top: 25px;
     margin-top: 35px;
-    border-top: 1px solid #34495e;
+    border-top: 1px solid var(--footer-border-dark);
 }
 .service-header, .article-header {
     display: flex;
@@ -683,7 +711,7 @@ footer address a {
     border-radius: 15px;
     font-size: 0.9em;
 }
-.importance-marker.important { background: #ffebee; color: #c62828; }
+.importance-marker.important { background: var(--danger-light); color: var(--danger-text); }
 
 /* Nové styly pro rozšířené funkce */
 .section-header {
@@ -699,22 +727,22 @@ footer address a {
     padding: 12px 24px;
     text-decoration: none;
     border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s;
+    font-weight: var(--font-weight-bold);
+    transition: background-color var(--transition-normal);
 }
 .booking-button:hover {
-    background: #059669;
+    background: var(--success-dark);
 }
 .student-project-notice {
-    background: #fff3cd;
-    border: 1px solid #ffeaa7;
+    background: var(--warning-light);
+    border: 1px solid var(--warning-border);
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 15px;
     text-align: center;
 }
 .student-project-notice p {
-    color: #856404;
+    color: var(--warning-text);
     margin: 0;
 }
 .authors {
@@ -745,11 +773,11 @@ section.departments-grid {
     color: var(--primary-color);
 }
 .service-card {
-    background: white;
+    background: var(--bg-primary);
     padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
     display: flex;
     flex-direction: column;
 }
@@ -760,7 +788,7 @@ section.departments-grid {
 .service-details {
     margin: 15px 0;
     padding: 15px;
-    background: #f8f9fa;
+    background: var(--light-gray);
     border-radius: 5px;
 }
 .service-actions {
@@ -773,8 +801,8 @@ section.departments-grid {
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
-    font-weight: bold;
-    transition: all 0.3s;
+    font-weight: var(--font-weight-bold);
+    transition: all var(--transition-normal);
     text-align: center;
     flex: 1;
 }
@@ -790,7 +818,7 @@ section.departments-grid {
     color: white;
 }
 .btn-secondary:hover {
-    background: #0891b2;
+    background: var(--info-dark);
 }
 .info-section {
     margin-top: 40px;
@@ -804,7 +832,7 @@ section.departments-grid {
 .info-card {
     background: var(--primary-light);
     padding: 20px;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
 }
 .info-card h3 {
     color: var(--primary-color);
@@ -812,7 +840,7 @@ section.departments-grid {
 }
 .main-nav li a.active {
     background-color: rgba(255, 255, 255, 0.2);
-    font-weight: bold;
+    font-weight: var(--font-weight-bold);
 }
 
 /* Styly pro stránku lékařů */
@@ -823,13 +851,13 @@ section.departments-grid {
     margin-top: 20px;
 }
 .doctor-card {
-    background: white;
+    background: var(--bg-primary);
     padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
     display: flex;
     flex-direction: column;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
 }
 .doctor-card:hover {
     transform: translateY(-2px);
@@ -870,12 +898,12 @@ section.departments-grid {
     margin-bottom: 5px;
 }
 .specialty {
-    color: #666;
-    font-weight: bold;
+    color: var(--text-muted);
+    font-weight: var(--font-weight-bold);
     margin-bottom: 5px;
 }
 .experience {
-    color: #888;
+    color: var(--text-muted);
     font-size: 0.9em;
     margin-bottom: 10px;
 }
@@ -883,8 +911,8 @@ section.departments-grid {
     margin: 10px 0;
 }
 .language-tag {
-    background: #e8f5e9;
-    color: #2e7d32;
+    background: var(--success-light);
+    color: var(--success-color);
     padding: 3px 8px;
     border-radius: 12px;
     font-size: 0.8em;
@@ -910,13 +938,13 @@ section.departments-grid {
     align-items: stretch;
 }
 .department-card {
-    background: white;
+    background: var(--bg-primary);
     padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
     display: flex;
     flex-direction: column;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
     height: 100%;
 }
 .department-card:hover {
@@ -948,7 +976,7 @@ section.departments-grid {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     margin-bottom: 15px;
 }
 
@@ -971,7 +999,7 @@ section.departments-grid {
     line-height: 1.5;
 }
 .department-details {
-    background: #f8f9fa;
+    background: var(--light-gray);
     padding: 15px;
     border-radius: 5px;
     margin-bottom: 15px;
@@ -980,8 +1008,8 @@ section.departments-grid {
     margin-bottom: 20px;
 }
 .service-tag {
-    background: #e8f5e9;
-    color: #2e7d32;
+    background: var(--success-light);
+    color: var(--success-color);
     padding: 4px 10px;
     border-radius: 15px;
     font-size: 0.8em;
@@ -1019,24 +1047,24 @@ section.search-suggestions {
     color: var(--primary-color);
 }
 .result-card {
-    background: white;
+    background: var(--bg-primary);
     padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
     margin-bottom: 20px;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
 }
 .result-card:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 .result-type {
-    background: #e8f5e9;
-    color: #2e7d32;
+    background: var(--success-light);
+    color: var(--success-color);
     padding: 5px 12px;
     border-radius: 15px;
     font-size: 0.8em;
-    font-weight: bold;
+    font-weight: var(--font-weight-bold);
     display: inline-block;
     margin-bottom: 10px;
 }
@@ -1055,7 +1083,7 @@ section.search-suggestions {
     line-height: 1.5;
 }
 .result-details {
-    background: #f8f9fa;
+    background: var(--light-gray);
     padding: 15px;
     border-radius: 5px;
     margin-bottom: 15px;
@@ -1074,12 +1102,12 @@ section.search-suggestions {
     margin-top: 20px;
 }
 .suggestion-card {
-    background: #f8f9fa;
+    background: var(--light-gray);
     padding: 20px;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
 }
 .suggestion-card h4 {
-    color: #495057;
+    color: var(--text-secondary);
     margin-bottom: 15px;
 }
 .suggestion-links {
@@ -1116,11 +1144,11 @@ section.contact-grid {
     gap: 20px;
 }
 .contact-card {
-    background: white;
+    background: var(--bg-primary);
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -1153,11 +1181,11 @@ section.contact-grid {
     gap: 20px;
 }
 .transport-card {
-    background: white;
+    background: var(--bg-primary);
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
 }
 
 .transport-card:hover {
@@ -1178,10 +1206,10 @@ section.contact-grid {
 }
 
 .form-container {
-    background: white;
+    background: var(--bg-primary);
     padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
 }
 .contact-form {
     max-width: 800px;
@@ -1198,19 +1226,19 @@ section.contact-grid {
 .form-group label {
     display: block;
     margin-bottom: 5px;
-    font-weight: bold;
-    color: #333;
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
 }
 .form-group input,
 .form-group select,
 .form-group textarea {
     width: 100%;
     padding: 12px 15px;
-    border: 2px solid #e1e5e9;
-    border-radius: 8px;
+    border: 2px solid var(--border-light);
+    border-radius: var(--border-radius);
     font-size: 16px;
-    background: #fff;
-    transition: all 0.3s ease;
+    background: var(--bg-primary);
+    transition: all var(--transition-normal);
     box-sizing: border-box;
 }
 .form-group input:focus,
@@ -1219,7 +1247,7 @@ section.contact-grid {
     outline: none;
     border-color: var(--primary-color);
     box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.1);
-    background: #F0FDFA;
+    background: var(--bg-secondary);
 }
 .form-group input:hover,
 .form-group select:hover,
@@ -1242,18 +1270,18 @@ section.contact-grid {
 /* Vylepšené checkboxy */
 .checkbox-label {
     padding: 10px 15px;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
+    border-radius: var(--border-radius);
+    transition: background-color var(--transition-normal);
     cursor: pointer;
 }
 
 .checkbox-label:hover {
-    background-color: #F0FDFA;
+    background-color: var(--bg-secondary);
 }
 
 .checkbox-label input[type="checkbox"]:checked + span {
     color: var(--primary-color);
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
 }
 
 /* Vylepšené styly pro formulářové prvky */
@@ -1265,7 +1293,7 @@ section.contact-grid {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    background: #fff;
+    background: var(--bg-primary);
     padding-right: 40px;
     cursor: pointer;
 }
@@ -1282,7 +1310,7 @@ section.contact-grid {
     height: 0;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
-    border-top: 6px solid #666;
+    border-top: 6px solid var(--gray);
     pointer-events: none;
     z-index: 1;
 }
@@ -1306,7 +1334,7 @@ section.contact-grid {
     height: 0;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
-    border-top: 6px solid #666;
+    border-top: 6px solid var(--gray);
     pointer-events: none;
     z-index: 1;
 }
@@ -1356,15 +1384,15 @@ section.contact-grid {
 .form-group label:has(+ select[required])::after,
 .form-group label:has(+ textarea[required])::after {
     content: "*";
-    color: #dc3545;
+    color: var(--danger-color);
     margin-left: 4px;
-    font-weight: bold;
+    font-weight: var(--font-weight-bold);
 }
 
 /* Placeholder styling */
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-    color: #6c757d;
+    color: var(--gray);
     opacity: 0.8;
 }
 
@@ -1372,30 +1400,30 @@ section.contact-grid {
 .form-group input:disabled,
 .form-group select:disabled,
 .form-group textarea:disabled {
-    background-color: #f8f9fa;
-    border-color: #e9ecef;
-    color: #6c757d;
+    background-color: var(--light-gray);
+    border-color: var(--light-gray);
+    color: var(--gray);
     cursor: not-allowed;
 }
 
 .form-group select option:disabled {
-    color: #999;
+    color: var(--text-muted);
     font-style: italic;
-    background-color: #f8f9fa;
+    background-color: var(--light-gray);
 }
 
 /* Error state */
 .form-group input.error,
 .form-group select.error,
 .form-group textarea.error {
-    border-color: #dc3545;
+    border-color: var(--danger-color);
     box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
 }
 
 .form-group input.error:focus,
 .form-group select.error:focus,
 .form-group textarea.error:focus {
-    border-color: #dc3545;
+    border-color: var(--danger-color);
     box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.2);
 }
 .submit-button {
@@ -1403,11 +1431,11 @@ section.contact-grid {
     color: white;
     padding: 14px 32px;
     border: none;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     font-size: 16px;
-    font-weight: 600;
+    font-weight: var(--font-weight-semibold);
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all var(--transition-normal);
     box-shadow: 0 2px 4px rgba(13, 148, 136, 0.2);
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -1424,10 +1452,10 @@ section.contact-grid {
 
 /* Styly pro rezervační systém */
 .booking-form-section {
-    background: white;
+    background: var(--bg-primary);
     padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
     margin-top: 30px;
 }
 .booking-form {
@@ -1437,7 +1465,7 @@ section.contact-grid {
 .form-section {
     margin-bottom: 40px;
     padding-bottom: 30px;
-    border-bottom: 1px solid #dee2e6;
+    border-bottom: 1px solid var(--border-light);
 }
 .form-section:last-of-type {
     border-bottom: none;
@@ -1483,9 +1511,17 @@ section.contact-grid {
     flex: 1;
 }
 
+.date-time-tables {
+    display: flex;
+    gap: var(--spacing-lg);
+    flex-wrap: wrap;
+}
+
 .date-picker-table,
 .time-picker-table {
     margin-top: var(--spacing-sm);
+    flex: 1;
+    min-width: 200px;
 }
 
 .date-table,
@@ -1523,7 +1559,7 @@ section.contact-grid {
     border: none;
     background: transparent;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all var(--transition-fast);
     border-radius: var(--border-radius-sm);
     min-height: 35px;
     font-size: var(--font-size-sm);
@@ -1546,8 +1582,8 @@ section.contact-grid {
 .time-option.disabled {
     cursor: not-allowed;
     pointer-events: none;
-    background: #ffe0e0;
-    color: #cc6666;
+    background: var(--danger-light);
+    color: var(--danger-text);
     text-decoration: line-through;
     opacity: 0.7;
 }
@@ -1558,10 +1594,10 @@ section.contact-grid {
     flex-direction: column;
     gap: 20px;
     text-align: center;
-    background: white;
+    background: var(--bg-primary);
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
     margin-bottom: 20px;
 }
 .service-header-content h1 {
@@ -1570,7 +1606,7 @@ section.contact-grid {
 }
 .service-subtitle {
     font-size: 1.1em;
-    color: #666;
+    color: var(--text-muted);
     margin-bottom: 20px;
 }
 .service-badges {
@@ -1586,7 +1622,7 @@ section.contact-grid {
     padding: 5px 12px;
     border-radius: 15px;
     font-size: 0.9em;
-    font-weight: bold;
+    font-weight: var(--font-weight-bold);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1596,10 +1632,10 @@ section.contact-grid {
     flex-shrink: 0;
 }
 .service-detail-content {
-    background: white;
+    background: var(--bg-primary);
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
     margin-bottom: 20px;
 }
 
@@ -1615,7 +1651,7 @@ section.contact-grid {
     border-bottom: 2px solid var(--primary-light);
 }
 .detail-main h3 {
-    color: #333;
+    color: var(--text-primary);
     margin: 25px 0 15px 0;
 }
 .detail-main ul {
@@ -1640,9 +1676,9 @@ section.contact-grid {
     gap: 25px;
 }
 .doctor-card-sidebar {
-    background: #f8f9fa;
+    background: var(--light-gray);
     padding: 20px;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     text-align: center;
 }
 .doctor-photo-sidebar {
@@ -1674,10 +1710,10 @@ section.contact-grid {
     margin-top: 15px;
 }
 .related-services {
-    background: white;
+    background: var(--bg-primary);
     padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
 }
 .related-services h2 {
     color: var(--primary-color);
@@ -1758,8 +1794,8 @@ section.contact-grid {
 }
 
 .languages-large .language-tag {
-    background: #e8f5e9;
-    color: #2e7d32;
+    background: var(--success-light);
+    color: var(--success-color);
     padding: 3px 8px;
     border-radius: 12px;
     font-size: 0.8em;
@@ -2296,9 +2332,9 @@ textarea:focus {
 
 /* Vylepšené kontrasty pro WCAG 2.0 AA */
 .importance-marker.important {
-    background: #ffebee;
-    color: #c62828;
-    border: 1px solid #c62828;
+    background: var(--danger-light);
+    color: var(--danger-text);
+    border: 1px solid var(--danger-text);
 }
 
 
@@ -2319,7 +2355,7 @@ textarea:focus {
 /* Vylepšené error stavy */
 .error-message {
     color: var(--danger-color);
-    background: #ffebee;
+    background: var(--danger-light);
     border: 1px solid var(--danger-color);
     padding: var(--spacing-md);
     border-radius: var(--border-radius);
@@ -2328,7 +2364,7 @@ textarea:focus {
 
 .success-message {
     color: var(--success-color);
-    background: #e8f5e9;
+    background: var(--success-light);
     border: 1px solid var(--success-color);
     padding: var(--spacing-md);
     border-radius: var(--border-radius);

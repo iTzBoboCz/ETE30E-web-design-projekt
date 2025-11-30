@@ -89,110 +89,111 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label>Preferovaný datum</label>
+                        <label>Datum a čas</label>
                         <input type="hidden" id="preferred-date" name="preferred-date" required>
-                        <div class="date-picker-controls">
-                            <div class="form-row" style="margin-bottom: 10px;">
-                                <div class="form-group select-group" style="margin-bottom: 0;">
-                                    <select id="month" name="month">
-                                        <option value="01">Leden</option>
-                                        <option value="02">Únor</option>
-                                        <option value="03">Březen</option>
-                                        <option value="04">Duben</option>
-                                        <option value="05">Květen</option>
-                                        <option value="06">Červen</option>
-                                        <option value="07">Červenec</option>
-                                        <option value="08">Srpen</option>
-                                        <option value="09">Září</option>
-                                        <option value="10">Říjen</option>
-                                        <option value="11">Listopad</option>
-                                        <option value="12">Prosinec</option>
-                                    </select>
-                                </div>
-                                <div class="form-group select-group" style="margin-bottom: 0;">
-                                    <select id="year" name="year">
-                                        <option value="2025">2025</option>
-                                        <option value="2026">2026</option>
-                                    </select>
+                        <input type="hidden" id="preferred-time" name="preferred-time" required>
+                        <div class="date-time-picker">
+                            <div class="date-picker-controls">
+                                <div class="form-row" style="margin-bottom: 10px;">
+                                    <div class="form-group select-group" style="margin-bottom: 0;">
+                                        <select id="month" name="month">
+                                            <option value="01">Leden</option>
+                                            <option value="02">Únor</option>
+                                            <option value="03">Březen</option>
+                                            <option value="04">Duben</option>
+                                            <option value="05">Květen</option>
+                                            <option value="06">Červen</option>
+                                            <option value="07">Červenec</option>
+                                            <option value="08">Srpen</option>
+                                            <option value="09">Září</option>
+                                            <option value="10">Říjen</option>
+                                            <option value="11">Listopad</option>
+                                            <option value="12">Prosinec</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group select-group" style="margin-bottom: 0;">
+                                        <select id="year" name="year">
+                                            <option value="2025">2025</option>
+                                            <option value="2026">2026</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="date-picker-table">
-                            <table class="date-table">
-                                <thead>
-                                    <tr>
-                                        <th>Po</th>
-                                        <th>Út</th>
-                                        <th>St</th>
-                                        <th>Čt</th>
-                                        <th>Pá</th>
-                                        <th>So</th>
-                                        <th>Ne</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><button type="button" class="date-option" data-date="2025-01-15">15</button></td>
-                                        <td><button type="button" class="date-option" data-date="2025-01-16">16</button></td>
-                                        <td><button type="button" class="date-option disabled" disabled>17</button></td>
-                                        <td><button type="button" class="date-option" data-date="2025-01-18">18</button></td>
-                                        <td><button type="button" class="date-option" data-date="2025-01-19">19</button></td>
-                                        <td><button type="button" class="date-option disabled" disabled>20</button></td>
-                                        <td><button type="button" class="date-option disabled" disabled>21</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td><button type="button" class="date-option" data-date="2025-01-22">22</button></td>
-                                        <td><button type="button" class="date-option" data-date="2025-01-23">23</button></td>
-                                        <td><button type="button" class="date-option" data-date="2025-01-24">24</button></td>
-                                        <td><button type="button" class="date-option disabled" disabled>25</button></td>
-                                        <td><button type="button" class="date-option" data-date="2025-01-26">26</button></td>
-                                        <td><button type="button" class="date-option disabled" disabled>27</button></td>
-                                        <td><button type="button" class="date-option disabled" disabled>28</button></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label>Preferovaný čas</label>
-                        <input type="hidden" id="preferred-time" name="preferred-time" required>
-                        <div class="time-picker-table">
-                            <table class="time-table">
-                                <tbody>
-                                    <tr>
-                                        <td><button type="button" class="time-option" data-time="08:00">08:00</button></td>
-                                        <td><button type="button" class="time-option" data-time="08:30">08:30</button></td>
-                                        <td><button type="button" class="time-option" data-time="09:00">09:00</button></td>
-                                        <td><button type="button" class="time-option disabled" disabled>09:30</button></td>
-                                        <td><button type="button" class="time-option" data-time="10:00">10:00</button></td>
-                                        <td><button type="button" class="time-option" data-time="10:30">10:30</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td><button type="button" class="time-option disabled" disabled>11:00</button></td>
-                                        <td><button type="button" class="time-option" data-time="11:30">11:30</button></td>
-                                        <td><button type="button" class="time-option" data-time="12:00">12:00</button></td>
-                                        <td><button type="button" class="time-option disabled" disabled>12:30</button></td>
-                                        <td><button type="button" class="time-option" data-time="13:00">13:00</button></td>
-                                        <td><button type="button" class="time-option" data-time="13:30">13:30</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td><button type="button" class="time-option" data-time="14:00">14:00</button></td>
-                                        <td><button type="button" class="time-option disabled" disabled>14:30</button></td>
-                                        <td><button type="button" class="time-option" data-time="15:00">15:00</button></td>
-                                        <td><button type="button" class="time-option" data-time="15:30">15:30</button></td>
-                                        <td><button type="button" class="time-option" data-time="16:00">16:00</button></td>
-                                        <td><button type="button" class="time-option disabled" disabled>16:30</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td><button type="button" class="time-option" data-time="17:00">17:00</button></td>
-                                        <td><button type="button" class="time-option" data-time="17:30">17:30</button></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="date-time-tables">
+                                <div class="date-picker-table">
+                                    <table class="date-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Po</th>
+                                                <th>Út</th>
+                                                <th>St</th>
+                                                <th>Čt</th>
+                                                <th>Pá</th>
+                                                <th>So</th>
+                                                <th>Ne</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><button type="button" class="date-option" data-date="2025-01-15">15</button></td>
+                                                <td><button type="button" class="date-option" data-date="2025-01-16">16</button></td>
+                                                <td><button type="button" class="date-option disabled" disabled>17</button></td>
+                                                <td><button type="button" class="date-option" data-date="2025-01-18">18</button></td>
+                                                <td><button type="button" class="date-option" data-date="2025-01-19">19</button></td>
+                                                <td><button type="button" class="date-option disabled" disabled>20</button></td>
+                                                <td><button type="button" class="date-option disabled" disabled>21</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td><button type="button" class="date-option" data-date="2025-01-22">22</button></td>
+                                                <td><button type="button" class="date-option" data-date="2025-01-23">23</button></td>
+                                                <td><button type="button" class="date-option" data-date="2025-01-24">24</button></td>
+                                                <td><button type="button" class="date-option disabled" disabled>25</button></td>
+                                                <td><button type="button" class="date-option" data-date="2025-01-26">26</button></td>
+                                                <td><button type="button" class="date-option disabled" disabled>27</button></td>
+                                                <td><button type="button" class="date-option disabled" disabled>28</button></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="time-picker-table">
+                                    <table class="time-table">
+                                        <tbody>
+                                            <tr>
+                                                <td><button type="button" class="time-option" data-time="08:00">08:00</button></td>
+                                                <td><button type="button" class="time-option" data-time="08:30">08:30</button></td>
+                                                <td><button type="button" class="time-option" data-time="09:00">09:00</button></td>
+                                                <td><button type="button" class="time-option disabled" disabled>09:30</button></td>
+                                                <td><button type="button" class="time-option" data-time="10:00">10:00</button></td>
+                                                <td><button type="button" class="time-option" data-time="10:30">10:30</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td><button type="button" class="time-option disabled" disabled>11:00</button></td>
+                                                <td><button type="button" class="time-option" data-time="11:30">11:30</button></td>
+                                                <td><button type="button" class="time-option" data-time="12:00">12:00</button></td>
+                                                <td><button type="button" class="time-option disabled" disabled>12:30</button></td>
+                                                <td><button type="button" class="time-option" data-time="13:00">13:00</button></td>
+                                                <td><button type="button" class="time-option" data-time="13:30">13:30</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td><button type="button" class="time-option" data-time="14:00">14:00</button></td>
+                                                <td><button type="button" class="time-option disabled" disabled>14:30</button></td>
+                                                <td><button type="button" class="time-option" data-time="15:00">15:00</button></td>
+                                                <td><button type="button" class="time-option" data-time="15:30">15:30</button></td>
+                                                <td><button type="button" class="time-option" data-time="16:00">16:00</button></td>
+                                                <td><button type="button" class="time-option disabled" disabled>16:30</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td><button type="button" class="time-option" data-time="17:00">17:00</button></td>
+                                                <td><button type="button" class="time-option" data-time="17:30">17:30</button></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
