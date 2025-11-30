@@ -65,27 +65,31 @@
                     <div class="form-row">
                         <div class="form-group select-group">
                             <label for="service">Typ služby</label>
-                            <select id="service" name="service" required>
-                                <option value="">Vyberte službu</option>
-                                <option value="obecna-prohlidka">Obecná prohlídka</option>
-                                <option value="detska-pece">Dětská péče</option>
-                                <option value="zubni-ordinace">Zubní ordinace</option>
-                                <option value="dermatologie">Dermatologie</option>
-                                <option value="fyzioterapie">Fyzioterapie</option>
-                                <option value="kardiologie">Kardiologie</option>
-                            </select>
+                            <div class="select-wrapper">
+                                <select id="service" name="service" required>
+                                    <option value="">Vyberte službu</option>
+                                    <option value="obecna-prohlidka">Obecná prohlídka</option>
+                                    <option value="detska-pece">Dětská péče</option>
+                                    <option value="zubni-ordinace">Zubní ordinace</option>
+                                    <option value="dermatologie">Dermatologie</option>
+                                    <option value="fyzioterapie">Fyzioterapie</option>
+                                    <option value="kardiologie">Kardiologie</option>
+                                </select>
+                            </div>
                         </div>
                         <div class="form-group select-group">
                             <label for="doctor">Lékař (volitelné)</label>
-                            <select id="doctor" name="doctor">
-                                <option value="">Jakýkoli dostupný lékař</option>
-                                <option value="jan-novak">MUDr. Jan Novák</option>
-                                <option value="eva-svobodova">MUDr. Eva Svobodová</option>
-                                <option value="petr-horak">MDDr. Petr Horák</option>
-                                <option value="anna-cerna">MUDr. Anna Černá</option>
-                                <option value="tomas-kratochvil">Bc. Tomáš Kratochvíl</option>
-                                <option value="pavel-dvorak">MUDr. Pavel Dvořák</option>
-                            </select>
+                            <div class="select-wrapper">
+                                <select id="doctor" name="doctor">
+                                    <option value="">Jakýkoli dostupný lékař</option>
+                                    <option value="jan-novak">MUDr. Jan Novák</option>
+                                    <option value="eva-svobodova">MUDr. Eva Svobodová</option>
+                                    <option value="petr-horak">MDDr. Petr Horák</option>
+                                    <option value="anna-cerna">MUDr. Anna Černá</option>
+                                    <option value="tomas-kratochvil">Bc. Tomáš Kratochvíl</option>
+                                    <option value="pavel-dvorak">MUDr. Pavel Dvořák</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
                     <div class="form-group">
@@ -217,12 +221,14 @@
                         </div>
                         <div class="form-group select-group">
                             <label for="gender">Pohlaví</label>
-                            <select id="gender" name="gender">
-                                <option value="">Vyberte pohlaví</option>
-                                <option value="male">Muž</option>
-                                <option value="female">Žena</option>
-                                <option value="other">Jiné</option>
-                            </select>
+                            <div class="select-wrapper">
+                                <select id="gender" name="gender">
+                                    <option value="">Vyberte pohlaví</option>
+                                    <option value="male">Muž</option>
+                                    <option value="female">Žena</option>
+                                    <option value="other">Jiné</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
                     <div class="form-row">
@@ -245,14 +251,16 @@
                     <h2>3. Další informace</h2>
                     <div class="form-group select-group">
                         <label for="insurance">Pojišťovna</label>
-                        <select id="insurance" name="insurance">
-                            <option value="">Vyberte pojišťovnu</option>
-                            <option value="vzp">VZP</option>
-                            <option value="ozp">OZP</option>
-                            <option value="zp">ZP</option>
-                            <option value="allianz">Allianz</option>
-                            <option value="other">Jiná</option>
-                        </select>
+                        <div class="select-wrapper">
+                            <select id="insurance" name="insurance">
+                                <option value="">Vyberte pojišťovnu</option>
+                                <option value="vzp">VZP</option>
+                                <option value="ozp">OZP</option>
+                                <option value="zp">ZP</option>
+                                <option value="allianz">Allianz</option>
+                                <option value="other">Jiná</option>
+                            </select>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="reason">Důvod návštěvy</label>

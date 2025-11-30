@@ -1298,9 +1298,17 @@ section.contact-grid {
     cursor: pointer;
 }
 
-/* CSS šipka pouze pro select dropdowny */
-.form-group select + .dropdown-arrow::after,
-.form-group:has(select)::after {
+/* Wrapper pro select s šipkou */
+.select-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.select-wrapper select {
+    width: 100%;
+}
+
+.select-wrapper::after {
     content: '';
     position: absolute;
     right: 15px;
@@ -1315,21 +1323,21 @@ section.contact-grid {
     z-index: 1;
 }
 
-.form-group select:focus + .dropdown-arrow::after,
-.form-group:has(select:focus)::after {
+.select-wrapper:focus-within::after {
     border-top-color: var(--primary-color);
 }
 
-/* Alternativní řešení - šipka přímo v select elementu */
-.form-group.select-group {
+/* Select bez wrapperu - fallback pro selecty bez labelu */
+.form-group.select-group:not(:has(.select-wrapper)) {
     position: relative;
 }
 
-.form-group.select-group::after {
+.form-group.select-group:not(:has(.select-wrapper))::after {
     content: '';
     position: absolute;
     right: 15px;
-    bottom: 12px; /* Umístíme šipku na spodek inputu */
+    top: 50%;
+    transform: translateY(-50%);
     width: 0;
     height: 0;
     border-left: 5px solid transparent;
@@ -1339,8 +1347,7 @@ section.contact-grid {
     z-index: 1;
 }
 
-.form-group.select-group select:focus ~ .form-group::after,
-.form-group.select-group:focus-within::after {
+.form-group.select-group:not(:has(.select-wrapper)):focus-within::after {
     border-top-color: var(--primary-color);
 }
 
